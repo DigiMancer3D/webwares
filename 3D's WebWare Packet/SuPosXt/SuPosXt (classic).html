@@ -1,0 +1,373 @@
+<!DOCTYPE HTML>
+<html id='html'>
+   <a id='link' name='link' align='center' style='align:center'>
+<head>
+ <title>SuPosXt
+ </title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta property="og:url" content="SuPosXt">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <html manifest="SuPosXt.appcache">
+ </meta>
+<link rel="preload" href="https://ipfs.io/ipfs/bafkreibje7lzjrt4w4exc6bq7i2luafznza4br7w53cgkeix53jmbq5p3e?filename=Node-Regular.otf" as="font" crossorigin />
+
+<link rel="icon" type="image/x-icon" href="https://ipfs.io/ipfs/bafkreigp74f7tz3sibimbi5pixukvphcwrc7gzflhxum3mhucuzheseuiy?filename=SPX-logo.png"></link>
+  </head>
+<script src="https://ipfs.io/ipfs/QmbegCCnE3RFReHYf45wCetXSKHVEy95bJruVpYkDDY8tm"></script>
+<style>
+body {
+background-color: black;
+color:silver;
+padding:0.1vw 0.2vw;
+  overflow-x:hidden;
+  scroll-x:none;
+  scroll-behavior: smooth;
+  font-family: "Courier-New", "Monospaced Slab-Serif", serif;
+ word-break:break-word;
+ cursor: default;
+ align:center;
+}
+
+#maininp:hover {
+ box-shadow: 0px 0px 8.5px rgb(255,255,255,0.38);
+}
+
+@font-face {
+  font-family: "Node";
+  src: url("https://ipfs.io/ipfs/bafkreibje7lzjrt4w4exc6bq7i2luafznza4br7w53cgkeix53jmbq5p3e?filename=Node-Regular.otf");
+}
+
+
+</style>
+<body>
+   <h1 style='align:center;cursor:default;font-size:400%;margin-bottom:-0.5vw;' title='. . . . Super-Positioned Text'>SuPosXt: <sup><sub><sub>Encrypt Text</sub></sub></sup></h1>
+ 
+    <textarea style='width:96.5%;align:center;text-align:center;padding:3.31vw 1.5vw 0.1vw 1.5vw;font-size:38px;margin:0.75vw 0.25vw;' type='password' cols='90' rows='2' id='maininp' class='inp' placeholder='Type here to SuPos it' oninput='this.innerHTML=this.value;this.style=&#039;width:96.5%;align:center;text-align:center;padding:3.31vw 1.5vw 0.1vw 1.5vw;font-family: "Node", "Bitstream Vera Serif", serif;font-size:98px;&#039;;fullhouse();'></textarea>
+     </hr>
+    <div id='output' style='overflow:none;white-space:pre-wrap;word-break:break-word;align:center;text-align:center;'>
+    </div>
+ 
+  <footer style='align:center;text-align:center;position:relative;bottom:0;width:100vw;'>
+  </br></br>
+  <hr style='width:69.63%;align:center;opacity:10%;margin-top:1.95vw;margin-bottom:1.95vw;'>
+  <p><b class='fbut'>Crafted by 3Douglas</b></br><b>2023</b></p></span>
+  <hr style='width:69.63%;align:center;opacity:10%;margin-top:0.95vw;margin-bottom:1.95vw;'>
+  </br></br>
+  </footer>
+</body>
+<script>
+
+//using fullhouse effect to transmute into supos
+function fullhouse() { 
+ var gibbler = document.getElementById('maininp').innerHTML;  //in
+ 
+ var discussion = gibbler.length, kimmy = '', dj = '';
+ var lettercounter = gibbler.length - 1, kimmy = '';
+ 
+ kimmy = gibbler[lettercounter]; 
+ 
+ if(gibbler === '') {
+  document.getElementById('maininp').style = 'width:96.5%;align:center;text-align:center;padding:3.31vw 1.5vw 0.1vw 1.5vw;font-size:38px;font-family: "CourierNew", "Monospaced Slab-Serif", serif;';
+  document.getElementById('output').innerHTML = '';
+ }
+ 
+ if(discussion === 0) {
+  kimmy = "";
+ }
+  
+ //dj needs to transmute what kimmy says for her parents to understand
+  if(kimmy === ' ' || kimmy === /\s/) {
+   dj = ".";
+  }
+  if(kimmy === 'A') {
+   dj = "00";
+  }   
+  if(kimmy === 'B') {
+   dj = "20+31";
+  }   
+  if(kimmy === 'C') {
+   dj = "01";
+  }   
+  if(kimmy === 'D') {
+   dj = "21+30";
+  }   
+  if(kimmy === 'E') {
+   dj = "20-30";
+  }   
+  if(kimmy === 'F') {
+   dj = "21-31";
+  }   
+  if(kimmy === 'G') {
+   dj = "03";
+  }   
+  if(kimmy === 'H') {
+   dj = "02";
+  }  
+  if(kimmy === 'I') {
+   dj = "A0:E1";
+  }       
+  if(kimmy === 'J') {
+   dj = "A1:E0";
+  }       
+  if(kimmy === 'K') {
+   dj = "A0:E0";
+  }       
+  if(kimmy === 'L') {
+   dj = "A1:E1";
+  }       
+  if(kimmy === 'M') {
+   dj = "A0:E1+B0:F1";
+  }       
+  if(kimmy === 'N') {
+   dj = "A1:E0+B1:F0";
+  }      
+  if(kimmy === 'O') {
+   dj = "A0:E0-B0:F0";
+  }      
+  if(kimmy === 'P') {
+   dj = "A0:E0+B0:F1";
+  }      
+  if(kimmy === 'Q') {
+   dj = "A1:E1-B1:F1";
+  }      
+  if(kimmy === 'R') {
+   dj = "A0:E0+B1:F0";
+  }      
+  if(kimmy === 'S') {
+   dj = "A0:E1+B1:F0";
+  }      
+  if(kimmy === 'T') {
+   dj = "A1:E0+B0:F1";
+  }      
+  if(kimmy === 'U') {
+   dj = "A0:E1+B0:F0";
+  }      
+  if(kimmy === 'V') {
+   dj = "A1:E0+B0:F0";
+  }      
+  if(kimmy === 'W') {
+   dj = "60:A0+01";
+  }      
+  if(kimmy === 'X') {
+   dj = "61:A1-01";
+  }      
+  if(kimmy === 'Y') {
+   dj = "00+71:B1";
+  }      
+  if(kimmy === 'Z') {
+   dj = "01-71:B1";
+  }      
+  if(kimmy === '0') {
+   dj = "01+70:B0";
+  }      
+  if(kimmy === '1') {
+   dj = "60:A0+01";
+  }      
+  if(kimmy === '2') {
+   dj = "61:A0+00";
+  }      
+  if(kimmy === '3') {
+   dj = "00+70:B1";
+  }      
+  if(kimmy === '4') {
+   dj = "60:A1+00";
+  }      
+  if(kimmy === '5') {
+   dj = "00+71:B0";
+  }      
+  if(kimmy === '6') {
+   dj = "61:A0+01";
+  }      
+  if(kimmy === '7') {
+   dj = "01+71:B0";
+  }      
+  if(kimmy === '8') {
+   dj = "60:A0-00";
+  }      
+  if(kimmy === '9') {
+   dj = "00-70:B0";
+  }      
+  if(kimmy === '!') {
+   dj = "61:71+00";
+  }      
+  if(kimmy === '?') {
+   dj = "00+A1:B1";
+  }      
+  if(kimmy === '"') {
+   dj = "60:70+01";
+  }      
+  if(kimmy === "'") {
+   dj = "60:71+01";
+  }      
+  if(kimmy === '<') {
+   dj = "01+A0:B1";
+  }      
+  if(kimmy === '>') {
+   dj = "01+A1:B0";
+  }        
+  if(kimmy === '^') {
+   dj = "00-A0:B0";
+  }      
+  if(kimmy === '_') {
+   dj = "01+A0:B0";
+  }     
+  if(kimmy === '[') {
+   dj = "00+A1:B0";
+  }     
+  if(kimmy === ']') {
+   dj = "00+A0:B1";
+  }     
+  if(kimmy === '#') {
+   dj = "60:70+00";
+  }     
+  if(kimmy === '&') {
+   dj = "61:71+01";
+  }     
+  if(kimmy === '*') {
+   dj = "61:70+01";
+  }     
+  if(kimmy === '(') {
+   dj = "61:70+00";
+  }     
+  if(kimmy === ')') {
+   dj = "60:71+01";
+  }     
+  if(kimmy === 'a') {
+   dj = "11+20+31";
+  }     
+  if(kimmy === 'b') {
+   dj = "10+20+31";
+  }     
+  if(kimmy === 'c') {
+   dj = "11+20+31";
+  }     
+  if(kimmy === 'd') {
+   dj = "11+20+30";
+  }     
+  if(kimmy === 'e') {
+   dj = "10+20+30";
+  }     
+  if(kimmy === 'f') {
+   dj = "11+21+31";
+  }     
+  if(kimmy === 'g') {
+   dj = "10+21+31";
+  }     
+  if(kimmy === 'h') {
+   dj = "11+21+30";
+  }     
+  if(kimmy === 'i') {
+   dj = "10:51:91";
+  }     
+  if(kimmy === 'j') {
+   dj = "11:51:90";
+  }     
+  if(kimmy === 'l') {
+   dj = "11:51:91";
+  }     
+  if(kimmy === 'k') {
+   dj = "10:50:90";
+  }     
+  if(kimmy === '$') {
+   dj = "11:50:91";
+  }     
+  if(kimmy === '%') {
+   dj = "10:51:90";
+  }     
+  if(kimmy === ':') {
+   dj = "10:51:91";
+  }     
+  if(kimmy === ';') {
+   dj = "11:51:90";
+  }     
+  if(kimmy === '@') {
+   dj = "04";
+  }     
+  if(kimmy === '|') {
+   dj = "05";
+  }     
+  if(kimmy === 'm') {
+   dj = "61:A0+01+71:B0";
+  }     
+  if(kimmy === 'n') {
+   dj = "60:A1+01+70:B1";
+  }     
+  if(kimmy === 'o') {
+   dj = "61:A1+00+71:B1";
+  }     
+  if(kimmy === 'p') {
+   dj = "61:A1+00+71:B0";
+  }     
+  if(kimmy === 'q') {
+   dj = "61:A1+01+71:B1";
+  }     
+  if(kimmy === 'r') {
+   dj = "60:A0+01+71:B0";
+  }     
+  if(kimmy === 's') {
+   dj = "60:A1+00+71:B0";
+  }     
+  if(kimmy === 't') {
+   dj = "61:A0+00+70:B1";
+  }     
+  if(kimmy === 'u') {
+   dj = "60:A1+00+70:B0";
+  }     
+  if(kimmy === 'v') {
+   dj = "61:A0+00+70:B0";
+  }     
+  if(kimmy === 'w') {
+   dj = "61:A1+00+71:B1";
+  }     
+  if(kimmy === 'x') {
+   dj = "61:A0+01+70:B1";
+  }     
+  if(kimmy === 'y') {
+   dj = "61:A0+00+71:B1";
+  }     
+  if(kimmy === 'z') {
+   dj = "60:A1+01+71:B0";
+  }     
+  if(kimmy === '{') {
+   dj = "60:A0+00+71:B1";
+  }     
+  if(kimmy === '}') {
+   dj = "61:A1+00+70:B0";
+  }     
+  if(kimmy === "\\") {
+   dj = "61:A1+00+70:B0";
+  }     
+  if(kimmy === '/') {
+   dj = "60:A0+01+71:B0";
+  }     
+  if(kimmy === '.') {
+   dj = "60:A0+00+70:B1";
+  }     
+  if(kimmy === '`') {
+   dj = "60:A0+00+71:B0";
+  }     
+  if(kimmy === '+') {
+   dj = "60:A1+00+71:B1";
+  }     
+  if(kimmy === ',') {
+   dj = "61:A1+00+70:B1";
+  }     
+  if(kimmy === '-') {
+   dj = "61:A1+00+71:B0";
+  }     
+  if(kimmy === '=') {
+   dj = "60:A0+00+70:B0";
+  }     
+  if(kimmy === '~') {
+   dj = "61:A1+01+70:B1";
+  }     
+ 
+  
+ 
+ document.getElementById('output').innerHTML += dj + "";  //out
+ 
+
+}
+
+</script>
+</html>
