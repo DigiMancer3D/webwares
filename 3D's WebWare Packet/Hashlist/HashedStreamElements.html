@@ -1,0 +1,627 @@
+<!DOCTYPE HTML>
+<html id='html'>
+   <a id='link' name='link' align='center' style='align:center'>
+<head>
+ <title>Hashed Stream Elements (HSE)
+ </title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta property="og:url" content="Setup your Stream elements & hashlink save them">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <html manifest="HSE.appcache">
+ </meta>
+<link rel="icon" type="image/x-icon" href="">
+  </head>
+<script src="https://ipfs.io/ipfs/QmbegCCnE3RFReHYf45wCetXSKHVEy95bJruVpYkDDY8tm"></script>
+<style>
+
+ body {
+  font-size: 150%;
+  overflow-x: none;
+  scroll-x: none;
+  scroll-behavior: smooth;
+  align: center;
+  width:100%;
+  }
+
+
+ * {
+  backface-visibility: hidden;
+ }
+ 
+ .footer {
+  postion: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+ }
+ 
+
+
+ html {
+  background-color: black;
+  color: silver;
+  scroll-behavior: smooth;
+  overflow-x: none;
+  scroll-y: smooth;
+  scroll-x: none;
+  -webkit-scroll-behavior: smooth;
+  x-scroll: none;
+  y-scroll: smooth;
+  -moz-scroll-behavior: smooth;
+-ms-scroll-behavior: smooth;  
+text-shadow: 0px 0px 0.69px green;
+  -webkit-align: center;
+  display: flex;
+ }
+
+ #html {
+  background-color: black;
+  color: silver;
+  scroll-behavior: smooth;
+  overflow-x: none;
+  scroll-y: smooth;
+  scroll-x: none;
+  -webkit-scroll-behavior: smooth;
+  x-scroll: none;
+  y-scroll: smooth;
+  -moz-scroll-behavior: smooth;
+-ms-scroll-behavior: smooth;  
+text-shadow: 0px 0px 0.69px green;
+  -webkit-align: center;
+  display: flex;
+ }
+ 
+ input {
+ background: inherit;
+ color: inherit;
+ border-bottom-color: dimgrey;
+ border-right-color: silver;
+ border-left-color: grey;
+ border-top-color: silver;
+ font-size: 95%;
+ align: center;
+ text-align: center;
+ width: 59%;
+ placeholder-color: white;
+ caret-color: limegreen;
+ caret-width: 3px;
+ input-flex: 1;
+ scroll: none;
+ autocomplete: off;
+ }
+ 
+ .input {
+ width: 90%;
+ }
+ 
+ .items {
+ display: flex;
+ width: auto;
+ align: center;
+ }
+ 
+ button {
+ background-color: inherit;
+ color: inherit;
+ border-radius: 50%;
+ font-size: 115%;
+ padding: 5px 15px;
+ margin-top: 3vw;
+ margin-left: 7px;
+ margin-right: 7px;
+ }
+ 
+ 
+ .button {
+ background-color: inherit;
+ color: inherit;
+ border-radius: 50%;
+ font-size: 50%;
+ padding: 5px 15px;
+ margin-top: 1.3vw;
+ align: left;
+ left: 0;
+ margin-right: 1.3vw;
+ cursor: pointer;
+ }
+ 
+ 
+ .button2 {
+ background-color: inherit;
+ color: inherit;
+ border-radius: 50%;
+ font-size: 50%;
+ padding: 5px 15px;
+ margin-top: 1.3vw;
+ align: right;
+ right: 0;
+ margin-left: 1.3vw;
+ cursor: pointer;
+ }
+ 
+ 
+ .button:hover, .button2:hover {
+ border-color: green;
+ box-shadow: 0px 1px 9px grey;
+ border-radius: 75%;
+ font-size: 75%;
+ padding: 4px 14px;
+ cursor: pointer;
+ margin-left: 4px;
+ margin-right: 4px;
+ }
+ 
+ 
+ .footer{
+  postion: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+ }
+   
+ .marspan {
+  padding-left:10vw;
+  padding-right:40vw;
+  }
+ 
+  .marquee {
+   border-left: 2.25px solid green;
+   border-right: 2.25px solid green;
+   font-size: 2.25vw;
+   width: 98%;
+   margin-bottom: 0.5%;
+   marign-right: -0.75%;
+   margin-left: 1px;
+  }
+  
+  
+ .themebut {
+ color:silver;
+ text-color: 0vw 0vw 9vw orange;
+ margin: 0.15vw 1.75vw;
+ padding: 0.15vw 1.5vw;
+ }
+ 
+ 
+  
+ @media screen and (min-width: 11in) { <!-- Desktop View -->
+
+ #marqen {
+   margin-bottom: 0.25%; 
+  margin-top: -0.8%; 
+ }
+  
+}  
+   
+ @media screen and (min-width: 9.9in) and (max-width: 11in) { <!-- Tablet & iPad View -->
+  
+ #marqen {
+   margin-bottom: 0.25%; 
+  margin-top: -0.67%; 
+ }
+  
+}
+  
+ @media screen and (max-width: 9.9in) { <!-- Mobile View -->
+
+ #marqen {
+   margin-bottom: 0.25%; 
+  margin-top: -0.5%; 
+ }
+}
+  
+ </style>
+ 
+ 
+ <body id="body" class="maintheme" onload="window.scrollTo(0,0)" style="align:center" align="center">
+  <div id="main" class="maintheme" >
+  
+  
+   <h1 style="align:center;" align="center"><b>#<span id='perm'><i id='titletxt' onclick="swtichtxt()">HSE</i></span></b></br>
+   <sup><sup><sub><span id='perm2'><span id='subtxt' onclick='switchtxt2()'>Re-Programable Hash stored Stream Elements</span></span></sub></sup></sup></h1>
+   </br>
+   <div id='save' align='center' style='align:center'>
+   <button id='savebutton' title='Hashlink Save' class='button;mainbutton;' onclick='save();' style='display:none'>Store to Hashlink</button>
+
+ <script src="https://ipfs.io/ipfs/QmbegCCnE3RFReHYf45wCetXSKHVEy95bJruVpYkDDY8tm"></script>
+   
+ <script>
+
+ function nextfun(){
+ 
+ document.getElementById('hostloc').innerHTML = "Itty.Bitty.Site (IB)";
+ 
+document.getElementById('shareon').innerHTML = '<div>Grabbing your Hashlink will only contain the most previous saved data so if you&#039;ve added or changed anything, save the list before getting the share link (via TinyURL)</div></br><form align="center" action="https://tinyurl.com/create.php" method="post" target="_blank"><table align="center" style="background-color:inhert;"><tr><td><input id="urlinp"  name="url" placeholder="Paste your Hashlink!" onfocusout="sharecheck()" style="width:auto" /></td><td><button id="submit" class="button" style="cursor:pointer;width:auto;display:none;" type="submit" name="submit" disabled>Get Share Link!</button></td></tr></table></form>';
+
+
+//https://tinyurl.com/create.php?url=  <-- doesn't work (get's confused about the # and ? in the hashlink)
+ 
+ a = document.querySelector('a'); LZMA.compress(a.outerHTML, 9, function(r) {a.innerText = a.href = 'https://itty.bitty.site/#'+document.getElementById("titletxt").innerHTML+'/?' + btoa(String.fromCharCode.apply(null, new Uint8Array(r)))});
+
+ }
+ 
+ </script>
+ 
+   </div>
+   
+   <!--Graph, timer, counter, goals, spin wheel/random picker with animation, progress bar-->
+   <!--Make flexbox sections that each widget contains it's own flexbox determination, use a base and replace by adding widget and removing equivalent number of empty, use a variable for empty block count -->
+   
+   
+   </br>
+    <div id="timerbody">
+      <span>
+	  
+	  
+	  </span>
+	  </br>
+        <span id="new2" style="display:none"><input id="inp2" name="inp2" class="inp" title="How many of these do you already have?" onfocus="this.select();" oninput="sanitize2();document.getElementById('inp2').innerHTML=this.value;nextr3();" placeholder="Number of item" type='number'  />&nbsp;<button style="button" class="button;mainbutton;" id="button3" onclick="addto2();nextr4();" disabled>Add&nbsp;to&nbsp;Have</button></span>
+   
+   
+    </div>
+  <hr>
+    <table align='center' style='align:center' id="timerout" >
+	
+	</table>
+	<table id="havetimer" align='center' style='align:center;color:orange;' >
+	
+	</table>
+  <span id='huh' style='display:none;'>1</span><span id='hoh' style='display:none;'>1</span><span id='san7hoh' style='display:none'></span><span id='san8huh' style='display:none'></span>
+  
+   </br>
+    <div id="counterbody">
+      <span><input id="inp" name="inp" class="inp" onfocus="this.select();" title="Input the item you want to add into the list" oninput="sanitize();document.getElementById('inp').innerHTML=this.value;nextr();" placeholder="Item" type="text" /></br><button style="button" class="button;mainbutton;" id="buttonin" onclick="addto();nextr2();" disabled>Need</button>&nbsp;<button style="button" class="button;mainbutton;" id="buttonin2" onclick="document.getElementById('new2').style='display:inline-block';nextr2();document.getElementById('inp2').select();" disabled>Have</button></span>
+	  </br>
+        <span id="new2" style="display:none"><input id="inp2" name="inp2" class="inp" title="How many of these do you already have?" onfocus="this.select();" oninput="sanitize2();document.getElementById('inp2').innerHTML=this.value;nextr3();" placeholder="Number of item" type='number'  />&nbsp;<button style="button" class="button;mainbutton;" id="button3" onclick="addto2();nextr4();" disabled>Add&nbsp;to&nbsp;Have</button></span>
+   
+   
+    </div>
+  <hr>
+    <table align='center' style='align:center' id="counterout" >
+	
+	</table>
+	<table id="havecounter" align='center' style='align:center;color:orange;' >
+	
+	</table>
+  <span id='huh' style='display:none;'>1</span><span id='hoh' style='display:none;'>1</span><span id='san9hoh' style='display:none'></span><span id='san10huh' style='display:none'></span>
+  
+   </br>
+    <div id="listbody">
+      <span><input id="inp" name="inp" class="inp" onfocus="this.select();" title="Input the item you want to add into the list" oninput="sanitize();document.getElementById('inp').innerHTML=this.value;nextr();" placeholder="Item" type="text" /></br><button style="button" class="button;mainbutton;" id="buttonin" onclick="addto();nextr2();" disabled>Need</button>&nbsp;<button style="button" class="button;mainbutton;" id="buttonin2" onclick="document.getElementById('new2').style='display:inline-block';nextr2();document.getElementById('inp2').select();" disabled>Have</button></span>
+	  </br>
+        <span id="new2" style="display:none"><input id="inp2" name="inp2" class="inp" title="How many of these do you already have?" onfocus="this.select();" oninput="sanitize2();document.getElementById('inp2').innerHTML=this.value;nextr3();" placeholder="Number of item" type='number'  />&nbsp;<button style="button" class="button;mainbutton;" id="button3" onclick="addto2();nextr4();" disabled>Add&nbsp;to&nbsp;Have</button></span>
+   
+   
+    </div>
+  <hr>
+    <table align='center' style='align:center' id="listout" >
+	
+	</table>
+	<table id="havelist" align='center' style='align:center;color:orange;' >
+	
+	</table>
+  <span id='huh' style='display:none;'>1</span><span id='hoh' style='display:none;'>1</span><span id='san5hoh' style='display:none'></span><span id='san6huh' style='display:none'></span>
+  
+  <footer id='footer' name='footer' align="center" style="align:center">
+  </br></br></br></br></br>
+  
+ 
+  <div align="center" style="center"><span id='notice'><br></br><hr><span id='shareon' ></span><span id='sharecheck' style='display:none'></span><hr><sup>To save your list, click "Save List" after inputting something into a list (Need | Have) then click the link that appears on screen. Saving a list will plot a LMZA compressed B64 hashlink containing the data you've input along with a copy of this webware.<sup></br></br>All information being inputted is only existing on your device & wihtin your browser.</br><sup>**<b>Node like servers are only used for saving lists into hashlinks with this webware.</b>**</sup></sup></sup></span>	
+   <hr class="hrtab">
+   
+   <span style="opacity:0.75;font-size:70%;bottom:0;color:grey;cursor:pointer;" align="center"><p onclick="window.open('https://3dthe.ninja')" target="_blank" rel="noreferrer;noopener;" title="Click to Visit 3Douglas' Website"><b>&nbsp;&nbsp;Hosted on <i id="hostloc">IPFS</i> | Crafted by <i>3Douglas</i>&nbsp;&nbsp;</b></br>Deoblou Corp. 2000-<span id="nyear"></span>&nbsp;®</br>Hodlserv Inc 2017-<span id="nyear2"></span>&nbsp;©</p></br><p onclick="window.open('https://itty.bitty.site/#Lists/?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')"  target="_blank" title="Click for Hashnet Version">Click here for the Hashnet Version</p>
+   <h6 align="center">Enjoying Hashed Lists?&nbsp; Consider Donating to the Creator with one of the cryptocurrency addresses below:</h6>
+   
+<span id="scrolldata">
+
+   <marquee onmouseover="this.stop();" onmouseout="this.start();" style="margin-bottom:-1vw;">
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#BTC/?eNpLSjYszDNLTSsqLSkrzyo2SsvKMK/ITssuNzHLLai0zDZILis0L7BIK0wHAFadD8M=')" target="_blank" title="Donate with BTC here">BTC: <b style="color:D4AF37">bc1qn6efrutvwjs2fjh7xkfkw46mpy9k0cvq7p8fqg</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#BCH/?eNorLCpKNk0sSEzOTU0sLTZKKbdIS89LTq/KNTarzMgrNCkvLDVOzS0uKSwGAF0pEFk=')" target="_blank" title="Donate with BCH here">BCH: <b style="color:D4AF37">qrrc5apacmeaus2dw8fgncgzm36yhnq4wqu3emstqs</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#DASH/?eNqLSE9xdjY1qgxKiso28faqDAsIiagKsUgJr0qpNAm1dAlNAQDGfwtu')" target="_blank" title="Donate with DASH here">DASH: <b style="color:D4AF37">XgdCC52yRbZk4KJyVPTXzT8dWzdy4U9DUd</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#DCR/?eNpzKc5zS0l0TLFI9PFI9w5wtEhPTs7PK3YLqyx0zMgrdA+0dAYA2U4MHQ==')" target="_blank" title="Donate with DCR here">DCR: <b style="color:D4AF37">DsnFdaAd8aLHgKPA8gcconsFVyqAhnqGQ9C</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#DGB/?eNpLSU8yLCwwS0kvz6jMSSxPNTcvTU2zKMwtKTWuyLNIzEgsMSitLCysKjMzBgBlkBA3')" target="_blank" title="Donate with DGB here">DGB: <b style="color:D4AF37">dgb1qp6dgwhylawe77uef8qmtu3xn8ahat0uyqqzv63</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#DEFC/?eNpzcbIMtnDNyi3Izwswr0xMsjDyMrG0SPVLKTYMLDbx8XGuBAC8/grX')" target="_blank" title="Donate with DEFC here">DEFC: <b style="color:D4AF37">DB9S8EjmponP7yab82J498eNds1Qs4LLCy</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#DOGE/?eNpzCUnzcEksjnDyzffJ9S7PCnDPy7Z0McpN88uIKq/KDHMOBQDMnQvk')" target="_blank" title="Donate with DOGE here">DOGE: <b style="color:D4AF37">DTfHDasXBMoLmKwjPGnk9D2mfNhZwziVCU</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#ETH%2FERC20_(no_NFTs)/?eNozqHAxdHIyMTF0TjQyNLN0dTI0tzAwS3E2MUs2STNySbI0NLE0tTR1NjMAAOCFCkc=')" target="_blank" title="Donate with ETH & ERC20s here">ETH/ERC20s (no NFTs): <b style="color:D4AF37">0xD1BB441Ca2169EB17806dC46c4f2Db9149595C60</b></b>
+<b class="themebut" href="data:text/plain,RKCWuxTBh9mETQDUiFRJzDZ8J9gyPQsGzt')" target="_blank" title="Donate with KMD here">KMD: <b style="color:D4AF37">RKCWuxTBh9mETQDUiFRJzDZ8J9gyPQsGzt</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#LBC/?eNrLSUo2LKwyyTAqyTGpMC80TUtLT8zJKS9NKy0ozyouSczJM0g3qDDOMjWqAABfhw/m')" target="_blank" title="Donate with LBC here">LBC: <b style="color:D4AF37">lbc1qz4h2tl4x7q5ffgallwufupwjstaln0g0x3j52x</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#LTC/?eNrLKUk2LMwoMU20qCpOLbesLDIpSTMyLTfOs8gzrcpOLcnLyEmvyiqpSDXPAwBdiBAm')" target="_blank" title="Donate with LTC here">LTC: <b style="color:D4AF37">ltc1qht5a8zsew9yr4tf25w3n8n5zketnhlgzjtxe7n</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#XMR/?eNoFwd0OQCAYANBnoq/UZa0wP80wP7cRYZgLxts7B8ihpZn4ehJiqYenis9lpVpBP1cHVy9Vew8hIwVzr65DqszOI4Q4oGPbstg0uMtxAw9KwD+p9Ef1pVe+WDGLHoT+AYJWHU4=')" target="_blank" title="Donate with XMR here">XMR: <b style="color:D4AF37">46nNDbfAjo66e815fSAgRSEWB8yhT7qYDEWucF96P9hxNTF8EbmAG33A43nkkLHbV5XM5V4v3J42o8D2dEyKqMieBgBY4BN</b></b>
+<b class="themebut" href="data:text/plain,DC2WxKTo81e7CfLFyS4PsKz4RLuCEhKFSo')" target="_blank" title="Donate with PIVX here">PIVX: <b style="color:D4AF37">DC2WxKTo81e7CfLFyS4PsKz4RLuCEhKFSo</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#SMART/?eNoLDsoyCwjPCgjJDkiqDKrMDExOTQ5OyQ8tS60sCTEyySvKBQDWxAyL')" target="_blank" title="Donate with SMART here">SMART: <b style="color:D4AF37">SRj6PWjPTkPbyRyiQcecSdoUveytT24nrm</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#TRX%2FTRC-10_(no_TRC-20s)/?eNoL8bbwKM8PN8rOqygIcQsvcSqJNCmvNE6PjDB2KozySbOIBADPPQu2')" target="_blank" title="Donate with TRX & TRC10s here">TRX/TRC-10s (no TRC-20s): <b style="color:D4AF37">TK8HwoW2knxpTFWtBtY4wy3gYX3BqZLf8Y</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#WAXP_(WAXP%2C_WAX_Tokens_%26_NFTs)/?eNoryzFMLNcrT8wFABDLA18=')" target="_blank" title="Donate with WAXP here">WAXP: <b style="color:D4AF37">vl1aw.wam</b></b>
+<b class="themebut" onclick="window.open('https://itty.bitty.site/#ZEC/?eNorMUxPy8gwLA6x9HHzsHDMDUpxD0w3dTPz8gsLNPENL7HIqAIAy5ULPw==')" target="_blank" title="Donate with ZEC here">ZEC: <b style="color:D4AF37">t1gfhh1sT9LFH8AmRdGQg5F6JNVQ4MWt8hz</b></b>
+</marquee>
+</span>
+</br></br></span>
+  </footer>
+ <script>
+ 
+ var datething = new Date();
+ document.getElementById('nyear').innerHTML = datething.getFullYear().toString().replace(/[^0-9]/gim,"");
+ document.getElementById('nyear2').innerHTML = datething.getFullYear().toString().replace(/[^0-9]/gim,"");
+ 
+ 
+ 
+ document.getElementById('inp').select();
+ var inp = document.getElementById('inp').value;
+ var inp2 = document.getElementById('inp2').value;
+ var button = document.getElementById('buttonin');
+ var buttonish = document.getElementById('buttonin2');
+ var button3 = document.getElementById('button3');
+ 
+ var huh = document.getElementById('huh').innerHTML;
+ var hoh = document.getElementById('hoh').innerHTML;
+ huh = Number(huh);
+ hoh = Number(hoh);
+ var clearnum = 0;
+ 
+function sharecheck(){
+  //document.getElementById('urlinp').value =  window.location;
+  if(document.getElementById('urlinp').value != ""){
+  document.getElementById('submit').style = "cursor:pointer;width:auto;display:block";
+  document.getElementById('submit').disabled = false;
+  }
+  }
+
+
+function clearcheck(){
+
+ if(clearnum <= 0){
+ document.getElementById('savebutton').style='display:none';
+ }
+ 
+ }
+ 
+ function sanitize(){
+ 
+ var jim = document.getElementById('inp').value;
+ jim = jim.replace(/[^a-z0-9áéíóúñü \()&.,_-]/gim,"");
+ document.getElementById('inp').value = jim;
+ 
+ }
+ 
+ 
+ function sanitize2(){
+ 
+ var jim2 = document.getElementById('inp2').value;
+ jim2 = jim2.replace(/[^0-9 \.]/gim,"");
+ document.getElementById('inp2').value = jim2;
+ 
+ }
+ 
+ 
+ 
+ function sanitize3(){
+ 
+ var jim3 = document.getElementById('txtsub1').value;
+ jim3 = jim3.replace(/[^a-z0-9áéíóúñü \()&.,_-]/gim,"");
+ document.getElementById('txtsub1').value = jim3;
+ 
+ document.getElementById('stxtbutt').disabled = false;
+ }
+ 
+ 
+ function sanitize4(){
+ 
+ var jim4 = document.getElementById('txtsub2').value;
+ jim4 = jim4.replace(/[^a-z0-9áéíóúñü \()&.,'_-]/gim,"");
+ document.getElementById('txtsub2').value = jim4;
+ 
+ document.getElementById('stxtbutt2').disabled = false;
+ }
+ 
+ 
+ function sanitize5(){
+ var uhoh = document.getElementById('san5hoh').innerHTML;
+ 
+ var jim5 = document.getElementById('editclick'+uhoh).value;
+  jim5 = jim5.replace(/[^a-z0-9áéíóúñü \()&.,'_-]/gim,"");
+ document.getElementById('editclick'+uhoh).value = jim5;
+ 
+ }
+ 
+ function sanitize6(){
+ var uhuh = document.getElementById('san6huh').innerHTML;
+ 
+ var jim6 = document.getElementById('editinp'+uhuh).value;
+  jim6 = jim6.replace(/[^a-z0-9áéíóúñü \()&.,'_-]/gim,"");
+ document.getElementById('editinp'+uhuh).value = jim6;
+ 
+ }
+ 
+ 
+ 
+ function nextr(){
+  if(inp.value === "" || inp.value === null){
+  button.disabled = true;
+  button.style = "border-color:black";
+  buttonish.disabled = true;
+  buttonish.style = "border-color:black";
+  }
+  else{
+  button.disabled = false;
+  button.style = "border-color:green;color:limegreen;";
+ // inp.addEventListener("keyup", function(event) {if (event.keyCode === 13) {next();}});
+ 
+  buttonish.disabled = false;
+  buttonish.style = "border-color:green;color:limegreen;";
+ // inp.addEventListener("keyup", function(event) {if (event.keyCode === 13) {next();}});
+  }
+  }
+  
+  function nextr2(){
+  
+  button.disabled = true;
+  button.style = "border-color:black";
+  
+  buttonish.disabled = true;
+  buttonish.style = "border-color:black";
+  
+  }
+ function nextr3(){
+  if(inp2.value === "" || inp2.value === null){
+  button3.disabled = true;
+  button3.style = "border-color:black";
+  }
+  else{
+  button3.disabled = false;
+  button3.style = "border-color:green;color:limegreen;";
+ // inp.addEventListener("keyup", function(event) {if (event.keyCode === 13) {next();}});
+ 
+  }
+  }
+  function nextr4(){
+   
+   document.getElementById('new2').style="display:none";
+  }
+ 
+ function addto(){
+ var what = document.getElementById('inp').value;
+ var when = "strike"+huh, when2 = "quie"+huh;
+ var whaa = document.getElementById('listout').innerHTML;
+ 
+ var editagain = 'document.getElementById("editinp'+huh+'").style="display:inline-block";document.getElementById("bd'+huh+'").style="display:none";document.getElementById("rbutton2'+huh+'").style="display:block";document.getElementById("removebtn1'+huh+'").style="display:none";document.getElementById("editinp'+huh+'").select();';
+ 
+ var editagain2 = 'document.getElementById(&#039;editinp'+huh+'&#039;).style=&#039;display:inline-block&#039;;document.getElementById(&#039;bd'+huh+'&#039;).style=&#039;display:none&#039;;document.getElementById(&#039;rbutton2'+huh+'&#039;).style=&#039;display:block&#039;;document.getElementById(&#039;removebtn1'+huh+'&#039;).style=&#039;display:none&#039;;document.getElementById(&#039;editinp'+huh+'&#039;).select();';
+ 
+ 
+ var stikers = 'document.getElementById("bd'+huh+'").style = "text-decoration:line-through;";document.getElementById("xon'+huh+'").style = "display:none";document.getElementById("xoff'+huh+'").style = "display:inline-block";document.getElementById("list'+huh+'").style="color:red";document.getElementById("savebutton").style="display:block";document.getElementById("bd'+huh+'").setAttribute("onclick", "")';
+ 
+ var stikers2 = 'document.getElementById("bd'+huh+'").style = "text-decoration:none;";document.getElementById("xoff'+huh+'").style = "display:none";document.getElementById("xon'+huh+'").style = "display:inline-block";document.getElementById("list'+huh+'").style="color:white";document.getElementById("savebutton").style="display:block";document.getElementById("bd'+huh+'").setAttribute("onclick", "'+editagain2+'")';
+ 
+ var removethis = 'document.getElementById("list'+huh+'").remove();clearnum=clearnum-1;document.getElementById("savebutton").style="display:block";document.getElementById("san6huh").innerHTML="";clearcheck()';
+ 
+ 
+ var findedit = 'document.getElementById("bd'+huh+'").innerHTML=document.getElementById("editinp'+huh+'").value;document.getElementById("rbutton2'+huh+'").style="display:none";document.getElementById("san6huh").innerHTML="";document.getElementById("editinp'+huh+'").style="display:none";document.getElementById("bd'+huh+'").style="display:inline-block";document.getElementById("removebtn1'+huh+'").style="display:block"';
+ 
+ 
+ var list = "<tr id='list"+huh+"' style='color:white;'><td>"+huh+")</td><td><button id='xon"+huh+"' onclick='"+stikers+"' title='Strike off list' class='button'>X</button><button id='xoff"+huh+"' onclick='"+stikers2+"' title='Remove Strike' class='button' style='display:none'>O</button></td><td><h3 id='item"+huh+"' ><input id='editinp"+huh+"' oninput='sanitize6();' onfocus='document.getElementById(&#039;san6huh&#039;).innerHTML=&#039;"+huh+"&#039;;' placeholder='Change Txt' value='"+what+"' onfocus='this.select();' style='display:none' /><b id='bd"+huh+"' onclick='"+editagain+"' >"+what+"</b></h3></td><td><button id='removebtn1"+huh+"' class='button' title='Remove from list completely' onclick='"+removethis+";' >Remove</button><button class='button' id='rbutton2"+huh+"' onclick='"+findedit+";' style='display:none' >Change</button></td></tr>";
+ 
+ huh = huh + 1;
+ clearnum = clearnum + 1;
+ 
+ document.getElementById('listout').innerHTML = whaa + list;
+ 
+ document.getElementById('inp').value = "";
+ document.getElementById('inp').innerHTML = "";
+ document.getElementById('savebutton').style="display:block;";
+ 
+ document.getElementById('inp').select();
+ }
+ 
+ function addto2(){
+ var eee = document.getElementById('inp2').value;
+ var whats = document.getElementById('inp').value;
+ var whens = "strike"+hoh, when2s = "quie"+hoh;
+ var whaas = document.getElementById('havelist').innerHTML;
+ 
+ var editthiss = 'document.getElementById("editor'+hoh+'").style = "display:inline-block";document.getElementById("editor'+hoh+'").select();document.getElementById("button'+hoh+'").style="display:none";document.getElementById("homenum'+hoh+'").style="display:none";document.getElementById("button4'+hoh+'").style="display:inline-block";document.getElementById("rbutton'+hoh+'").style="display:inline-block";';
+ 
+ var editstuff = 'document.getElementById("homenum'+hoh+'").innerHTML = document.getElementById("editor'+hoh+'").value; document.getElementById("editor'+hoh+'").value = "";document.getElementById("editor'+hoh+'").style = "display:none";document.getElementById("button'+hoh+'").style="display:inline-block";document.getElementById("homenum'+hoh+'").style="display:inline-block";document.getElementById("button4'+hoh+'").style="display:none";document.getElementById("savebutton").style="display:block";document.getElementById("san5hoh").innerHTML="";document.getElementById("rbutton'+hoh+'").style="display:none";';
+ 
+ var listedlist = 'var jif = document.getElementById("editor'+hoh+'").value; jif.replace(/[^0-9 \.]/gim,&#039;&#039;); document.getElementById("editor'+hoh+'").value = jif;';  
+ 
+ var txtedit = 'document.getElementById("button'+hoh+'").style="display:none;";document.getElementById("button6'+hoh+'").style="display:block;";document.getElementById("editclick'+hoh+'").style="display:block";document.getElementById("bb'+hoh+'").style="display:none";document.getElementById("editclick'+hoh+'").select();';
+ 
+ //document.getElementById("san5hoh").innerHTML="'+hoh+'";
+ 
+ var edittxts = "document.getElementById(&#039;bb"+hoh+"&#039;).innerHTML=document.getElementById(&#039;editclick"+hoh+"&#039;).value;document.getElementById(&#034;button"+hoh+"&#034;).style=&#034;display:block&#034;;document.getElementById(&#034;button6"+hoh+"&#034;).style=&#034;display:none&#034;;document.getElementById(&#034;editclick"+hoh+"&#034;).style=&#034;display:none&#034;;document.getElementById(&#034;bb"+hoh+"&#034;).style=&#034;display:block&#034;;";
+ 
+ var lists = "<tr id='lists"+hoh+"'><td>"+hoh+")&nbsp;</td><td><h3 id='items"+hoh+"' ><input id='editclick"+hoh+"' oninput='sanitize5();' onfocus='document.getElementById(&#039;san6huh&#039;).innerHTML=&#039;"+huh+"&#039;;' placeholder='Change Txt' value='"+whats+"' onfocus='this.select();' style='display:none' /><b id='bb"+hoh+"' onclick='"+txtedit+"'>"+whats+"</b></h3></td><td>&nbsp;(<span id='homenum"+hoh+"'>"+eee+"</span><input id='editor"+hoh+"' title='How many of these do you have?' placeholder='Number of item' type='number' style='display:none' oninput='"+listedlist+"' /> owned)</td><td><button id='rbutton"+hoh+"' class='button' title='Need to change how many you have?' onclick='document.getElementById(&#039;lists"+hoh+"&#039;).remove();clearnum=clearnum-1;document.getElementById(&#039;san5hoh&#039;).innerHTML=&#034;&#034;;clearcheck()'  style='display:none' >Remove</button></td><td><button id='button"+hoh+"' class='button' title='Need to change how many you have?' onclick='"+editthiss+";' >Edit</button><button id='button4"+hoh+"' class='button' onclick='"+editstuff+"' title='Done changing things?' style='display:none'>Change</button><button id='button6"+hoh+"' class='button' onclick='"+edittxts+"' title='Done changing things?' style='display:none'>Change</button></td></tr>";
+ 
+
+ 
+ hoh = hoh + 1;
+ clearnum = clearnum + 1;
+ 
+ document.getElementById('havelist').innerHTML = whaas + lists;
+ 
+ document.getElementById('inp').value = "";
+ document.getElementById('inp').innerHTML = "";
+ document.getElementById('inp2').value = "";
+ document.getElementById('inp2').innerHTML = "";
+ document.getElementById('savebutton').style="display:block;";
+ 
+ 
+ document.getElementById('inp').select();
+ }
+ 
+ 
+ function swtichtxt(){
+ 
+ document.getElementById('perm').innerHTML = "<input id='txtsub1' oninput='sanitize3()' placeholder='Change Title' title='Making things more personal?' /></br><button id='stxtbutt' class='button' onclick='txthere1()' disabled >Done</button>";
+ 
+  document.getElementById('txtsub1').select();
+ 
+ }
+ 
+ 
+ function txthere1(){
+ var txt2title = document.getElementById('txtsub1').value;
+
+ document.getElementById('perm').innerHTML = "<i id='titletxt' onclick='swtichtxt()'>"+txt2title+"</i>";
+ }
+ 
+ 
+ 
+ function switchtxt2(){
+ 
+ document.getElementById('perm2').innerHTML = "<input id='txtsub2' oninput='sanitize4()' placeholder='Change Subtext' title='Need to explain something?' /></br><button id='stxtbutt2' class='button' onclick='txthere2()' disabled >Done</button>";
+ 
+  document.getElementById('txtsub2').select();
+ 
+ }
+ 
+ 
+ function txthere2(){
+ var txt2title2 = document.getElementById('txtsub2').value;
+
+ document.getElementById('perm2').innerHTML = "<i id='txtsub2' onclick='switchtxt2()'>"+txt2title2+"</i>";
+ }
+ 
+ 
+ 
+ function save(){
+ document.getElementById('huh').innerHTML = huh;
+ document.getElementById('hoh').innerHTML = hoh;
+ 
+ 
+ 
+ document.getElementById('savebutton').style = "display:none";
+ nextfun();
+ }
+ 
+ 
+ 
+ 
+
+ 
+ </script>
+ 
+ </div>
+ </body>
+  </a>
+  
+ <script src="https://ipfs.io/ipfs/QmbegCCnE3RFReHYf45wCetXSKHVEy95bJruVpYkDDY8tm"></script>
+ <script>
+
+ 
+ function nextfun(){ 
+ 
+ document.getElementById('hostloc').innerHTML = "Itty.Bitty.Site (IB)";
+ 
+document.getElementById('shareon').innerHTML = '<div>Grabbing your Hashlink will only contain the most previous saved list data so if you&#039;ve added or changed anything, save the list before getting the share link (via TinyURL)</div></br><form align="center" action="https://tinyurl.com/create.php" method="post" target="_blank"><table align="center" style="background-color:inhert;"><tr><td><input id="urlinp"  name="url" placeholder="Paste your Hashlink!" onfocusout="sharecheck()" style="width:auto" /></td><td><button id="submit" class="button" style="cursor:pointer;width:auto;display:none;" type="submit" name="submit" disabled>Get Share Link!</button></td></tr></table></form>';
+
+
+<!--To share this list, save the changes you've made by clicking "Save List" then click the link that appears on screen, now copy the hashlink in the address bar (which will contain itty.bitty.site/#HList/)-->
+ 
+  a = document.querySelector('a'); LZMA.compress(a.outerHTML, 9, function(r) {a.innerText = a.href = 'https://itty.bitty.site/#'+document.getElementById("titletxt").innerHTML+'/?' + btoa(String.fromCharCode.apply(null, new Uint8Array(r)))});
+
+
+ }
+ 
+ </script>
+ </html>

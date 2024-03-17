@@ -1,0 +1,184 @@
+<html style="scroll-behavior:smooth; scroll-y:smooth; javascript: allow;">
+<head>
+ <title>Hash Key Cutter</title>
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+</head>
+ 
+<body id="body" style="margin-top:-1.5vw; word-wrap: break-word;scroll-behavior:smooth; scroll-y:smooth; javascript: allow;background-color:black;color:white;">
+ <span id="world" align="center" syle="scroll-behavior:smooth;"></br>
+   <p style="height:22.5vw;" id="obj2" align="left" onLoad="handleFileSelect(evt); handleFileSelect2(evt2);" ><span style="cursor: default;margin-right:2vw;" align="left"><img id="imgtop" style="background-color:white;width:15vw;height:auto;margin-right:0.5vw;margin-left:0.5vw;padding:0.5vw;" align="left" src="https://api.qrserver.com/v1/create-qr-code/?data=https://PvtPpr.app/HKC&size=250x250">
+  </span><span id="quote" style="text-align:left;inline-height:0vw;-moz-white-space: pre; font-size:3vw; margin-top:-2.5vw; margin-bottom:-2.5vw; line-height: normal; color:orange;" align="left" onclick="Alert();">&nbsp; &nbsp; &nbsp;Hash Key Cutter is a simple way to reduce your hashes like hashlinks and base64 hashes by creating keys to represent the hash and give you a restorable master key.</span></br><p align="center" style="margin-top:-10vw;margin-left:-5vw;margin-right:8vw;margin-bottom:0.5vw;"><button id="hashkeycutter"  style="color: darkgreen; padding:0.5vw; font-size: 150%; background-color:lightgreen; font-weight: bold; box-shadow: 3px 2px #223322; margin-left:-5vw;" align="right" type="button" onclick="window.open('https://pvtppr.app/Certables')" rel="noreferrer noopener">Build&nbsp;a&nbsp;Certable</button>&nbsp; &nbsp;<button id="certables" style="color: darkgreen; padding:0.5vw; font-size: 150%; background-color:lightgreen; font-weight: bold; box-shadow: 3px 2px #223322;" type="submit"  align="right" onClick="window.open('https://PvtPpr.app/CSupport')" target="_blank" rel="noreferrer noopener">Build&nbsp;Chain&nbsp;Support</button>&nbsp; &nbsp;<button id="Teleporter" style="color: darkgreen; padding:0.5vw; font-size: 150%; background-color:lightgreen; font-weight: bold; box-shadow: 3px 2px #223322;" type="submit"  align="right" onclick="window.open('https://pvtppr.app/Teleporter')" rel="noreferrer noopener">Hash&nbsp;Teleporter</button><hr style="border-width:0.6px; border-color:lightgreen; color:lightgreen; z-index:3;margin-top:1.5vw;margin-bottom:1.5vw;"></p>
+ </p>
+  <div style="margin-bottom:-2vw;margin-top:-5px;" id="obj1" align="center" text-align="center">
+  <span style="text-align:center" align="center">
+   <p align="center"><textarea id="inp" onfocus="this.select();" style="width:48%;padding:0.5vw;text-align:center; border: none; color: lightgreen; padding:0.5vw; font-size: 148%; background-color:#414141; font-weight: bold;" rows="10" placeholder="Base64 Hashes Go Here" align="center"></textarea>
+    <textarea id="out" onfocus="this.select();" style="width:48%;padding:0.5vw;text-align:center; border: none; color: lightgreen; padding:0.5vw; font-size: 148%; background-color:#414141; font-weight: bold;" align="center" placeholder="Keys Go Here" rows="10"></textarea><hr id="hr" style="border-width:0.6px; border-color:lightgreen; color:lightgreen; z-index:3;">
+   <input type="button" id="cut" style="width:46%; padding:0.5vw; margin-right:0.5vw; text-align:center; color: black; border:1px solid brown; font-size: 148%; background-color:orange; font-weight: bold;box-shadow:2px 2px 4px grey;" value="Cut Keys" onClick="compress()" /> 
+   <input id="res" type="button" value="Restore Master" style="width:46%; margin-left:0.5vw; padding:0.5vw; text-align:center; color: black; border:1px solid brown; font-size: 148%; background-color:orange; font-weight: bold;box-shadow:2px 2px 4px grey;" onClick="restore();" />
+</p><hr style="border-width:0.6px; border-color:lightgreen; color:lightgreen; z-index:3;">
+  </br>
+<input class="clickres" type="button" value="refresh" align="right" style="border: 0.02vw solid #B22222; background-color: pink; color: black; padding: 0.5vw; padding-right: 0.75vw; padding-left: 0.75vw; box-shadow: 3px 2px #332222; font-weight: bold; cursor: pointer; width:98%; font-size:148%;" onclick="document.location.reload(true);window.scrollTo(0,0);" />
+<hr id="hr060" style="border-width:0.6px; border-color:lightgreen; color:lightgreen; z-index:3;" >
+</span></div></span>
+<script>
+ function compress() {
+ var imgCur = document.getElementById('inp').value;
+ var jimmy = [];
+let compressedImg = imgCur.split('').reduce((o, c, d) => {
+  if (o[o.length - 2] === c && o[o.length - 1] < 35) o[o.length - 1]++;
+  else 
+   o.push(c, '');
+ if (o[o.length - 3] % d) jimmy.push(d);
+    else jimmy.push(o[o.length - 3]);
+  return o;
+},[]).map(_ => typeof _ === 'number' ? _.toString(36) : _).join('');
+ 
+
+  var imgCur2 = document.getElementById('inp').value;
+ var jim = [];
+let compressedImg2 = imgCur2.split('').reduce((p, e, t) => {
+  if (p[p.length - 2] === e && p[p.length - 1] < 35) p[p.length - 1]++;
+  else 
+   p.push(e, 0);
+ if (p[p.length - 3] % t) jim.push(t);
+    else jim.push(p[p.length - 3]);
+  return p;
+},[]).map(__ => typeof __ === 'number' ? __.toString(36) : __).join('');
+ 
+ 
+ var str = compressedImg; 
+ function findRepeat(str) {
+  const arr = str.split('');
+  const hash = new Map();
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (hash.get(arr[i]) === undefined) {
+      hash.set(arr[i], true);
+    } else {
+      const value = hash.get(arr[i]);
+      if (value) {
+        hash.set(arr[i], !value);
+      }
+    }
+  }
+  hash.forEach((v, k, g) => {
+    if (!v || g)
+      result.push(k);
+  });
+  return result;
+}
+ 
+ document.getElementById('out').value = 'Public Key: 3v' + findRepeat(str).join('') + '\n\nView Key: 6v' + compressedImg +  '\n\nPriv Key: #' + btoa(jimmy.join('')) + '\n\nMaster Key: Mv#' + btoa(compressedImg2) + '\n\n';
+ 
+ 
+ document.getElementById('inp').value = '';
+}
+
+
+function restore(){
+ var compressedImgCur1 = document.getElementById('out').value.replace('Mv#', '');
+ var compressedImgCur = atob(compressedImgCur1);
+let decompressedImgCur = compressedImgCur
+  .split('').map((c,i,a)=>i%2?undefined:new Array(2+parseInt(a[i+1],36)).join(c)).join('');
+ document.getElementById('inp').value = decompressedImgCur;
+}
+
+</script>
+<script>
+  function handleFileSelect(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+
+    var files = evt.dataTransfer.files; // FileList object.
+    var reader = new FileReader();  
+    reader.onload = function(event) {            
+         document.getElementById('inp').value = event.target.result;
+    }        
+    reader.readAsText(files[0],"UTF-8");  
+  }
+
+  
+  function handleDragOver(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+   // evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+  }
+
+  // Setup the dnd listeners.
+  var dropZone = document.getElementById('inp');
+  dropZone.addEventListener('dragover', handleDragOver, false);
+  dropZone.addEventListener('drop', handleFileSelect, false);
+  
+ 
+  function handleFileSelect2(evt2) {
+    evt2.stopPropagation();
+    evt2.preventDefault();
+
+    var files2 = evt2.dataTransfer.files2; // FileList object.
+    var reader2 = new FileReader();  
+    reader2.onload = function(event) {            
+         document.getElementById('out').value = event.target.result;
+    }        
+    reader2.readAsText(files2[0],"UTF-8");  
+  }
+
+  
+  function handleDragOver2(evt2) {
+    evt2.stopPropagation();
+    evt2.preventDefault();
+   // evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+  }
+
+  // Setup the dnd listeners.
+  var dropZone = document.getElementById('inp');
+  dropZone.addEventListener('dragover', handleDragOver, false);
+  dropZone.addEventListener('drop', handleFileSelect, false);
+  
+ 
+</script>
+<script> 
+ 
+document.getElementById("inp").addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+   // focus next input
+    document.getElementById("cut").click();
+    document.getElementById("out").focus();
+}});
+ document.getElementById("out").addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+   // focus next input
+    document.getElementById("res").click();
+    document.getElementById("inp").focus();
+}});
+</script>
+
+ <hr id="hr080" style="border-width:0.6px; z-index:3;">
+     <p align="center" align="center" id="obj3" class="obj1" style="font-size:148%;color:white;"><a align="center" id="wierd" href="https://tinyurl.com/4n4vdpbf" target="_blank" style="text-decoration:none; color:lightgreen;">1629E517720D255CCD486483A423C61090F5C920E919D9050E4BC09059440365</a><br><sup><i>[<b><sup><sub>bef</sub></sup></b>]</i></br><sub style="font-size:148%;"><b>3D#<i><sup onclick="HelpAlert();"><sub>15227djbedp48ho</sub></sup></i></b></sub></sup>
+<h6 align="center" id="obj4" class="obj1" style="font-size:148%; cursor:pointer;"></br>
+   <p onclick="window.open('https://codepen.io/digimancer3d/pen/QWOreZm');" style="margin-bottom:-4vw;margin-top:-4vw;" target="_blank" rel="noopener noreferrer"><sub><sup>This was designed on Codepen.io, click to view &amp; fork on Codepen.</sup></sub></p></h6></br>
+  <h6 align="center" onclick="window.open('https://bittube.app');" target="_blank" rel="noopener noreferrer" style="font-size:148%;cursor:pointer;margin:0.5vw 0vw -6.5vw 0vw;"><sup><sub>Monetized by Bittube Airtime</sub></sup></h6>
+     </p>
+    </div>
+
+ <script>
+  function HelpAlert() {
+   alert("Hello & Welcome to the Help Hash.\n\nThe hash you clicked on (#15227djbedp48ho), confirms the correct face ouput superposition for this ittybittyapp.\n\nThe face output is this hashedapp face-data (ctrl+a) you see before building your keys.\n\n\n\nThank You\n     Updated:[LS0zRA::FEB262022]");
+  }
+  
+  function Alert() {
+   alert("Hello & Welcome to the the Hash Key Cutter.\n\nYou clicked on an easter egg and the PvtPpr team hopes you enjoyed this.\n\nThis Hash Key Cutter (HKC) allows anyone to build crypto-style wallet with a recoverable master key.\n\nThe superpositions for [bef] & 3D# is the word, ''Builder''. End result bef hash is in sha256 and 3D hash (3D#) is in 3D's hashing alg. 3D# is the bef hash in a 3D hash. Find 3D# alg at https://deobloucorp.com/3dhash\n\n\nTry finding the HelpAlert that has more information packed inside!\n\n\n\nThank You\n     Updated:[LS0zRA::FEB262022]");
+  
+   }
+
+</script>
+</body>
+<meta name="airtime-platform-display" content="PvtPpr Generator Main">
+<meta name="airtime-platform-id" content="a8adb15a-c69a-ea15-8862-2c34df8d3250">
+<script src="https://bittubeapp.com/tubepay/airtime.loader.js" data-verify="meta" data-autostart="true"></script>
+</html>

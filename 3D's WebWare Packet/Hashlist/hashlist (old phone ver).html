@@ -1,0 +1,567 @@
+<!-- 
+Private Capable Hashed List System
+------------------------------------
+Needs:
+
+add & remove stuff
+
+"sharable"
+
+plot hash
+
+----
+After list is made:
+-------------------
+be able to add more
+
+strikeout and unstrike (with counter)
+
+re-plot hash for updates
+
+-->
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title>Hashed Lists
+ </title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!--<meta property="og:url" content="">-->
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <html manifest="Hlist.appcache">
+ </meta>
+<!-- <link rel="icon" type="image/x-icon" href="">  -->
+  </head>
+<script src="https://ipfs.io/ipfs/QmbegCCnE3RFReHYf45wCetXSKHVEy95bJruVpYkDDY8tm"></script>
+<style>
+
+ body {
+  background-color: black;
+  color: silver;
+  font-size: 150%;
+  overflow-x: none;
+  scroll-x: none;
+  scroll-behavior: smooth;
+  align: center;
+  }
+
+
+ * {
+  backface-visibility: hidden;
+ }
+ 
+ .footer {
+  postion: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+ }
+
+ html {
+  background-color: black;
+  scroll-behavior: smooth;
+  overflow-x: none;
+  scroll-y: smooth;
+  scroll-x: none;
+  -webkit-scroll-behavior: smooth;
+  x-scroll: none;
+  y-scroll: smooth;
+  -moz-scroll-behavior: smooth;
+-ms-scroll-behavior: smooth;  
+text-shadow: 0px 0px 0.69px green;
+  -webkit-align: center;
+  display: flex;
+ }
+ 
+ #topsub1 {
+ font-size: 60%;
+ }
+ 
+ input {
+ background: inherit;
+ color: inherit;
+ border-bottom-color: dimgrey;
+ border-right-color: silver;
+ border-left-color: grey;
+ border-top-color: silver;
+ font-size: 95%;
+ align: center;
+ text-align: center;
+ width: 59%;
+ placeholder-color: white;
+ caret-color: limegreen;
+ caret-width: 3px;
+ input-flex: 1;
+ scroll: none;
+ autocomplete: off;
+ }
+ 
+ #inp {
+ width: 90%;
+ }
+ 
+ 
+ .items {
+ display: flex;
+ width: auto;
+ align: center;
+ margin-left: 2px;
+ margin-right: 2px;
+ }
+ 
+ button {
+ background-color: inherit;
+ color: inherit;
+ border-radius: 50%;
+ font-size: 115%;
+ padding: 5px 15px;
+ margin-top: 3vw;
+ }
+ 
+ 
+ .button {
+ background-color: inherit;
+ color: inherit;
+ border-radius: 50%;
+ font-size: 50%;
+ padding: 5px 15px;
+ margin-top: 1.3vw;
+ border-color: black;
+ align: left;
+ left: 0;
+ margin-right: 1.3vw;
+ box-shadow: 0px 0px 0px dimgrey;
+ cursor: pointer;
+ }
+ 
+ 
+ .button2 {
+ background-color: inherit;
+ color: inherit;
+ border-radius: 50%;
+ font-size: 50%;
+ padding: 5px 15px;
+ margin-top: 1.3vw;
+ border-color: black;
+ align: right;
+ right: 0;
+ margin-left: 1.3vw;
+ box-shadow: 0px 0px 0px dimgrey;
+ cursor: pointer;
+ }
+ 
+ .button:hover, .button2:hover {
+ border-radius: 75%;
+ font-size: 75%;
+ padding: 4px 14px;
+ border-color: green;
+ box-shadow: 0px 1px 9px grey;
+ cursor: pointer;
+ }
+ 
+ .footer{
+  postion: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+ }
+   
+  
+ @media screen and (min-width: 11in) { <!-- Desktop View -->
+
+body{
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+ }
+  
+}  
+   
+ @media screen and (min-width: 9.9in) and (max-width: 11in) { <!-- Tablet & iPad View -->
+  
+body{
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+ }
+  
+}
+  
+ @media screen and (max-width: 9.9in) { <!-- Mobile View -->
+
+body{
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+ }
+  
+}
+  
+ </style>
+ 
+ 
+ <body id="body" onload="window.scrollTo(0,0)" style="align:center" align="center">
+  <div id="main" onLoad="window.scrollTo(0,0)">
+  
+  
+   <h1 style="align:center;" align="center"><b>#<i>Lists</i></b></br>
+   <sup><sup><sub>Re-Programable Hash stored Lists</sub></sup></sup></h1>
+   </br>
+   <div id='save' align='center' style='align:center'>
+   <button id='savebutton' class='button' onclick='save();' style='display:none'>Save List</button>
+   <a id='link' name='link' style='display:none'>
+   <style>
+   
+ body {
+  background-color: black;
+  color: silver;
+  font-size: 150%;
+  overflow-x: none;
+  scroll-x: none;
+  scroll-behavior: smooth;
+  align: center;
+  }
+
+
+ * {
+  backface-visibility: hidden;
+ }
+ 
+ .footer {
+  postion: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+ }
+
+ html {
+  background-color: black;
+  scroll-behavior: smooth;
+  overflow-x: none;
+  scroll-y: smooth;
+  scroll-x: none;
+  -webkit-scroll-behavior: smooth;
+  x-scroll: none;
+  y-scroll: smooth;
+  -moz-scroll-behavior: smooth;
+-ms-scroll-behavior: smooth;  
+text-shadow: 0px 0px 0.69px green;
+  -webkit-align: center;
+  display: flex;
+ }
+ 
+ #topsub1 {
+ font-size: 60%;
+ }
+ 
+ input {
+ background: inherit;
+ color: inherit;
+ border-bottom-color: dimgrey;
+ border-right-color: silver;
+ border-left-color: grey;
+ border-top-color: silver;
+ font-size: 95%;
+ align: center;
+ text-align: center;
+ width: 59%;
+ placeholder-color: white;
+ caret-color: limegreen;
+ caret-width: 3px;
+ input-flex: 1;
+ scroll: none;
+ autocomplete: off;
+ }
+ 
+ .input {
+ width: 90%;
+ }
+ 
+ .items {
+ display: flex;
+ width: auto;
+ align: center;
+ margin-left: 2px;
+ margin-right: 2px;
+ }
+ 
+ button {
+ background-color: inherit;
+ color: inherit;
+ border-radius: 50%;
+ font-size: 115%;
+ padding: 5px 15px;
+ margin-top: 3vw;
+ }
+ 
+ 
+ .button {
+ background-color: inherit;
+ color: inherit;
+ border-radius: 50%;
+ font-size: 50%;
+ padding: 5px 15px;
+ margin-top: 1.3vw;
+ border-color: black;
+ align: left;
+ left: 0;
+ margin-right: 1.3vw;
+ box-shadow: 0px 0px 0px dimgrey;
+ cursor: pointer;
+ }
+ 
+ 
+ .button2 {
+ background-color: inherit;
+ color: inherit;
+ border-radius: 50%;
+ font-size: 50%;
+ padding: 5px 15px;
+ margin-top: 1.3vw;
+ border-color: black;
+ align: right;
+ right: 0;
+ margin-left: 1.3vw;
+ box-shadow: 0px 0px 0px dimgrey;
+ cursor: pointer;
+ }
+ 
+ .button:hover, .button2:hover {
+ border-radius: 75%;
+ font-size: 75%;
+ padding: 4px 14px;
+ border-color: green;
+ box-shadow: 0px 1px 9px grey;
+ cursor: pointer;
+ }
+ 
+ .footer{
+  postion: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+ }
+   
+  
+ @media screen and (min-width: 11in) { <!-- Desktop View -->
+
+body{
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+ }
+  
+}  
+   
+ @media screen and (min-width: 9.9in) and (max-width: 11in) { <!-- Tablet & iPad View -->
+  
+body{
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+ }
+  
+}
+  
+ @media screen and (max-width: 9.9in) { <!-- Mobile View -->
+
+body{
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+ }
+  
+}
+   </style>
+  <div id='top'></div>
+   
+   <script id='ssss'></script>
+   <script id='s2s'></script>
+
+ <script src="https://ipfs.io/ipfs/QmbegCCnE3RFReHYf45wCetXSKHVEy95bJruVpYkDDY8tm"></script>
+   <script id='s3ss'></script>
+ <script>
+
+ 
+ function nextfun(){
+ 
+ 
+ a = document.querySelector('a'); LZMA.compress(a.outerHTML, 9, function(r) {a.innerText = a.href = 'https://itty.bitty.site/#HList/?' + btoa(String.fromCharCode.apply(null, new Uint8Array(r)))});
+ document.getElementById('link').style = "display:inline-block";
+ }
+ 
+ </script>
+   </a>
+   </div>
+   </br>
+    <div id="listbody">
+      <span><input id="inp" name="inp" class="inp" onfocus="this.select();" oninput="sanitize();document.getElementById('inp').innerHTML=this.value;nextr();" placeholder="Item" type="text" /></br></br><button style="button" class="button" id="buttonin" onclick="addto();nextr2();" disabled>Need</button>&nbsp;<button style="button" class="button" id="buttonin2" onclick="document.getElementById('new2').style='display:inline-block';nextr2();" disabled>Have</button></span>
+	  </br>
+        <span id="new2" style="display:none"><input id="inp2" name="inp2" class="inp" onfocus="this.select();" oninput="sanitize2();document.getElementById('inp2').innerHTML=this.value;nextr3();" placeholder="Number of item" type='number'  />&nbsp;<button style="button" class="button" id="button3" onclick="addto2();nextr4();" disabled>Add&nbsp;to&nbsp;Have</button></span>
+   
+   
+    </div>
+  <hr>
+    <table align='center' style='align:center' id="listout" >
+	
+	</table>
+	<table id="havelist" align='center' style='align:center;color:orange;' >
+	
+	</table>
+  <span id='huh' style='display:none;'>1</span><span id='hoh' style='display:none;'>1</span>
+  <!--</div>-->
+ <script>
+ document.getElementById('inp').select();
+ var inp = document.getElementById('inp').value;
+ var inp2 = document.getElementById('inp2').value;
+ var button = document.getElementById('buttonin');
+ var buttonish = document.getElementById('buttonin2');
+ var button3 = document.getElementById('button3');
+ var huh = document.getElementById('huh').innerHTML;
+ var hoh = document.getElementById('hoh').innerHTML;
+ huh = Number(huh);
+ hoh = Number(hoh);
+ 
+ 
+ function sanitize(){
+ 
+ var jim = document.getElementById('inp').value;
+ jim = jim.replace(/[^a-z0-9áéíóúñü \()&.,_-]/gim,"");
+ document.getElementById('inp').value = jim;
+ 
+ }
+ 
+ 
+ 
+ function sanitize2(){
+ 
+ var jim2 = document.getElementById('inp2').value;
+ jim2 = jim2.replace(/[^0-9 \.]/gim,"");
+ document.getElementById('inp2').value = jim2;
+ 
+ }
+ 
+ 
+ function nextr(){
+  if(inp.value === "" || inp.value === null){
+  button.disabled = true;
+  button.style = "border-color:black";
+  buttonish.disabled = true;
+  buttonish.style = "border-color:black";
+  }
+  else{
+  button.disabled = false;
+  button.style = "border-color:green;color:limegreen;";
+ // inp.addEventListener("keyup", function(event) {if (event.keyCode === 13) {next();}});
+ 
+  buttonish.disabled = false;
+  buttonish.style = "border-color:green;color:limegreen;";
+ // inp.addEventListener("keyup", function(event) {if (event.keyCode === 13) {next();}});
+  }
+  }
+  
+  function nextr2(){
+  
+  button.disabled = true;
+  button.style = "border-color:black";
+  
+  buttonish.disabled = true;
+  buttonish.style = "border-color:black";
+  
+  }
+ function nextr3(){
+  if(inp2.value === "" || inp2.value === null){
+  button3.disabled = true;
+  button3.style = "border-color:black";
+  }
+  else{
+  button3.disabled = false;
+  button3.style = "border-color:green;color:limegreen;";
+ // inp.addEventListener("keyup", function(event) {if (event.keyCode === 13) {next();}});
+ 
+  }
+  }
+  function nextr4(){
+   
+   document.getElementById('new2').style="display:none";
+  }
+ 
+ function addto(){
+ var what = document.getElementById('inp').value;
+ var when = "strike"+huh, when2 = "quie"+huh;
+ var stikers = 'document.getElementById("item'+huh+'").style = "text-decoration:line-through;";document.getElementById("xon'+huh+'").style = "display:none";document.getElementById("xoff'+huh+'").style = "display:inline-block";document.getElementById("list'+huh+'").style="color:red";';
+ var stikers2 = 'document.getElementById("item'+huh+'").style = "text-decoration:none;";document.getElementById("xoff'+huh+'").style = "display:none";document.getElementById("xon'+huh+'").style = "display:inline-block";document.getElementById("list'+huh+'").style="color:white";';
+ var removethis = 'document.getElementById("list'+huh+'").style = "display:none"';
+ var whaa = document.getElementById('listout').innerHTML;
+ 
+ 
+ var list = "<tr id='list"+huh+"' style='color:white;'><td>"+huh+")</td><td><button id='xon"+huh+"' onclick='"+stikers+"' class='button'>X</button><button id='xoff"+huh+"' onclick='"+stikers2+"' class='button' style='display:none'>O</button></td><td><h3 id='item"+huh+"' ><b>"+what+"</b></h3></td><td><button class='button' onclick='"+removethis+";' >Remove</button></td></tr>";
+ 
+ huh = huh + 1;
+ 
+ document.getElementById('listout').innerHTML = whaa + list;
+ 
+ document.getElementById('inp').value = "";
+ document.getElementById('inp').innerHTML = "";
+ document.getElementById('savebutton').style="display:block;";
+ 
+ //document.getElementById('huh').innerHTML = huh;
+ }
+ 
+ 
+ function addto2(){
+ var eee = document.getElementById('inp2').value;
+ var whats = document.getElementById('inp').value;
+ var whens = "strike"+hoh, when2s = "quie"+hoh;
+ var editthiss = 'document.getElementById("editor'+hoh+'").style = "display:inline-block";document.getElementById("button'+hoh+'").style="display:none";document.getElementById("homenum'+hoh+'").style="display:none";document.getElementById("button4").style="display:inline-block";';
+ var whaas = document.getElementById('havelist').innerHTML;
+ var editstuff = 'document.getElementById("homenum'+hoh+'").innerHTML = document.getElementById("editor'+hoh+'").value; document.getElementById("editor'+hoh+'").value = "";document.getElementById("editor'+hoh+'").style = "display:none";document.getElementById("button'+hoh+'").style="display:inline-block";document.getElementById("homenum'+hoh+'").style="display:inline-block";document.getElementById("button4").style="display:none";';var listedlist = 'var jif = document.getElementById("editor'+hoh+'").value; jif.replace(/[^0-9 \.]/gim,&#039;&#039;); document.getElementById("editor'+hoh+'").value = jif;';  
+ 
+ 
+ 
+ 
+ var lists = "<tr id='lists"+hoh+"'><td>"+hoh+")&nbsp;</td><td><h3 id='items"+hoh+"' ><b>"+whats+"</b></h3></td><td>&nbsp;(<span id='homenum"+hoh+"'>"+eee+"</span><input id='editor"+hoh+"' placeholder='Number of item' type='number' style='display:none' oninput='"+listedlist+"' /> @home)</td><td><button id='button"+hoh+"' class='button' onclick='"+editthiss+";' >Edit</button><button id='button4' class='button' onclick='"+editstuff+"' style='display:none'>Change</button></td></tr>";
+ 
+ 
+ hoh = hoh + 1;
+ 
+ document.getElementById('havelist').innerHTML = whaas + lists;
+ 
+ document.getElementById('inp').value = "";
+ document.getElementById('inp').innerHTML = "";
+ document.getElementById('inp2').value = "";
+ document.getElementById('inp2').innerHTML = "";
+ document.getElementById('savebutton').style="display:block;";
+ 
+ document.getElementById('hoh').innerHTML = hoh;
+ }
+ 
+ function save(){
+ document.getElementById('huh').innerHTML = huh;
+ document.getElementById('hoh').innerHTML = hoh;
+ 
+ document.getElementById('top').innerHTML = document.getElementById('body').innerHTML;
+ 
+ document.getElementById('s3ss').innerHTML = 'function nextfun(){a = document.querySelector(&#039;a&#039;); LZMA.compress(a.outerHTML, 9, function(r) {a.innerText = a.href = &#039;https://itty.bitty.site/#HList/?&#039; + btoa(String.fromCharCode.apply(null, new Uint8Array(r)))});document.getElementById(&#039;link&#039;).style = "display:inline-block";}';
+ 
+ document.getElementById('ssss').innerHTML = 'document.getElementById(&#039;inp&#039;).select();var inp = document.getElementById(&#039;inp&#039;).value;var inp2 = document.getElementById(&#039;inp2&#039;).value;var button = document.getElementById(&#039;buttonin&#039;);var buttonish = document.getElementById(&#039;buttonin2&#039;);var button3 = document.getElementById(&#039;button3&#039;);var huh = document.getElementById(&#039;huh&#039;).innerHTML;var hoh = document.getElementById(&#039;hoh&#039;).innerHTML;huh = Number(huh); hoh = Number(hoh);function sanitize(){var jim = document.getElementById(&#039;inp&#039;).value;jim = jim.replace(/[^a-z0-9áéíóúñü \()&.,_-]/gim,"");document.getElementById(&#039;inp&#039;).value = jim;}function sanitize2(){var jim2 = document.getElementById(&#039;inp2&#039;).value;jim2 = jim2.replace(/[^0-9 \.]/gim,"");document.getElementById(&#039;inp2&#039;).value = jim2;}function nextr(){ if(inp.value === "" || inp.value === null){ button.disabled = true; button.style = "border-color:black"; buttonish.disabled = true; buttonish.style = "border-color:black"; } else{ button.disabled = false; button.style = "border-color:green;color:limegreen;";// inp.addEventListener("keyup", function(event) {if (event.keyCode === 13) {next();}}); buttonish.disabled = false; buttonish.style = "border-color:green;color:limegreen;";// inp.addEventListener("keyup", function(event) {if (event.keyCode === 13) {next();}}); } }  function nextr2(){  button.disabled = true; button.style = "border-color:black";  buttonish.disabled = true; buttonish.style = "border-color:black";  }function nextr3(){ if(inp2.value === "" || inp2.value === null){ button3.disabled = true; button3.style = "border-color:black"; } else{ button3.disabled = false; button3.style = "border-color:green;color:limegreen;";// inp.addEventListener("keyup", function(event) {if (event.keyCode === 13) {next();}}); } } function nextr4(){    document.getElementById(&#039;new2&#039;).style="display:none"; }function addto(){var what = document.getElementById(&#039;inp&#039;).value;var when = "strike"+huh, when2 = "quie"+huh;var stikers = &#039;document.getElementById("item&#039;+huh+&#039;").style = "text-decoration:line-through;";document.getElementById("xon&#039;+huh+&#039;").style = "display:none";document.getElementById("xoff&#039;+huh+&#039;").style = "display:inline-block";document.getElementById("list&#039;+huh+&#039;").style="color:red";&#039;;var stikers2 = &#039;document.getElementById("item&#039;+huh+&#039;").style = "text-decoration:none;";document.getElementById("xoff&#039;+huh+&#039;").style = "display:none";document.getElementById("xon&#039;+huh+&#039;").style = "display:inline-block";document.getElementById("list&#039;+huh+&#039;").style="color:white";&#039;;var removethis = &#039;document.getElementById("list&#039;+huh+&#039;").style = "display:none"&#039;;var whaa = document.getElementById(&#039;listout&#039;).innerHTML;var list = "&#060;tr id=&#039;list"+huh+"&#039; style=&#039;color:white;&#039;&#062;&#060;td&#062;"+huh+")&#060;/td&#062;&#060;td&#062;&#060;button id=&#039;xon"+huh+"&#039; onclick=&#039;"+stikers+"&#039; class=&#039;button&#039;&#062;X&#060;/button&#062;&#060;button id=&#039;xoff"+huh+"&#039; onclick=&#039;"+stikers2+"&#039; class=&#039;button&#039; style=&#039;display:none&#039;&#062;O&#060;/button&#062;&#060;/td&#062;&#060;td&#062;&#060;h3 id=&#039;item"+huh+"&#039; &#062;&#060;b&#062;"+what+"&#060;/b&#062;&#060;/h3&#062;&#060;/td&#062;&#060;td&#062;&#060;button class=&#039;button&#039; onclick=&#039;"+removethis+";&#039; &#062;Remove&#060;/button&#062;&#060;/td&#062;&#060;/tr&#062;";huh = huh + 1;document.getElementById(&#039;listout&#039;).innerHTML = whaa + list;document.getElementById(&#039;inp&#039;).value = "";document.getElementById(&#039;inp&#039;).innerHTML = "";document.getElementById(&#039;savebutton&#039;).style="display:block;";}function addto2(){var eee = document.getElementById(&#039;inp2&#039;).value;var whats = document.getElementById(&#039;inp&#039;).value;var whens = "strike"+hoh, when2s = "quie"+hoh;var editthiss = &#039;document.getElementById("editor&#039;+hoh+&#039;").style = "display:inline-block";document.getElementById("button&#039;+hoh+&#039;").style="display:none";document.getElementById("homenum&#039;+hoh+&#039;").style="display:none";document.getElementById("button4").style="display:inline-block";&#039;;var whaas = document.getElementById(&#039;havelist&#039;).innerHTML;var editstuff = &#039;document.getElementById("homenum&#039;+hoh+&#039;").innerHTML = document.getElementById("editor&#039;+hoh+&#039;").value; document.getElementById("editor&#039;+hoh+&#039;").value = "";document.getElementById("editor&#039;+hoh+&#039;").style = "display:none";document.getElementById("button&#039;+hoh+&#039;").style="display:inline-block";document.getElementById("homenum&#039;+hoh+&#039;").style="display:inline-block";document.getElementById("button4").style="display:none";&#039;;var listedlist = &#039;var jif = document.getElementById("editor&#039;+hoh+&#039;").value; jif.replace(/[^0-9 \.]/gim,&#039;&#039;); document.getElementById("editor&#039;+hoh+&#039;").value = jif;&#039;;  var lists = "&#060;tr id=&#039;lists"+hoh+"&#039;&#062;&#060;td&#062;"+hoh+")&nbsp;&#060;/td&#062;&#060;td&#062;&#060;h3 id=&#039;items"+hoh+"&#039; &#062;&#060;b&#062;"+whats+"&#060;/b&#062;&#060;/h3&#062;&#060;/td&#062;&#060;td&#062;&nbsp;(&#060;span id=&#039;homenum"+hoh+"&#039;&#062;"+eee+"&#060;/span&#062;&#060;input id=&#039;editor"+hoh+"&#039; placeholder=&#039;Number of item&#039; type=&#039;number&#039; style=&#039;display:none&#039; oninput=&#039;"+listedlist+"&#039; /&#062; @home)&#060;/td&#062;&#060;td&#062;&#060;button id=&#039;button"+hoh+"&#039; class=&#039;button&#039; onclick=&#039;"+editthiss+";&#039; &#062;Edit&#060;/button&#062;&#060;button id=&#039;button4&#039; class=&#039;button&#039; onclick=&#039;"+editstuff+"&#039; style=&#039;display:none&#039;&#062;Change&#060;/button&#062;&#060;/td&#062;&#060;/tr&#062;";hoh = hoh + 1;document.getElementById(&#039;havelist&#039;).innerHTML = whaas + lists;document.getElementById(&#039;inp&#039;).value = "";document.getElementById(&#039;inp&#039;).innerHTML = "";document.getElementById(&#039;inp2&#039;).value = "";document.getElementById(&#039;inp2&#039;).innerHTML = "";document.getElementById(&#039;savebutton&#039;).style="display:block;";}function save(){ document.getElementById(&#039;top&#039;).innerHTML = document.getElementById(&#039;main&#039;).innerHTML; document.getElementById(&#039;ssss&#039;).innerHTML = &#039;document.getElementById(&#039;inp&#039;).select();var inp = document.getElementById(&#039;inp&#039;).value;var inp2 = document.getElementById(&#039;inp2&#039;).value;var button = document.getElementById(&#039;buttonin&#039;);var buttonish = document.getElementById(&#039;buttonin2&#039;);var button3 = document.getElementById(&#039;button3&#039;);var huh = &#039;+huh+&#039;;var hoh = &#039;+hoh+&#039;;function sanitize(){var jim = document.getElementById(&#039;inp&#039;).value;jim = jim.replace(/[^a-z0-9áéíóúñü \()&.,_-]/gim,"");document.getElementById(&#039;inp&#039;).value = jim;}function sanitize2(){var jim2 = document.getElementById(&#039;inp2&#039;).value;jim2 = jim2.replace(/[^0-9 \.]/gim,"");document.getElementById(&#039;inp2&#039;).value = jim2;}function nextr(){ if(inp.value === "" || inp.value === null){ button.disabled = true; button.style = "border-color:black"; buttonish.disabled = true; buttonish.style = "border-color:black"; } else{ button.disabled = false; button.style = "border-color:green;color:limegreen;";// inp.addEventListener("keyup", function(event) {if (event.keyCode === 13) {next();}}); buttonish.disabled = false; buttonish.style = "border-color:green;color:limegreen;";// inp.addEventListener("keyup", function(event) {if (event.keyCode === 13) {next();}}); } }  function nextr2(){  button.disabled = true; button.style = "border-color:black";  buttonish.disabled = true; buttonish.style = "border-color:black";  }function nextr3(){ if(inp2.value === "" || inp2.value === null){ button3.disabled = true; button3.style = "border-color:black"; } else{ button3.disabled = false; button3.style = "border-color:green;color:limegreen;";// inp.addEventListener("keyup", function(event) {if (event.keyCode === 13) {next();}}); } } function nextr4(){    document.getElementById(&#039;new2&#039;).style="display:none"; }function addto(){var what = document.getElementById(&#039;inp&#039;).value;var when = "strike"+huh, when2 = "quie"+huh;var stikers = &#039;document.getElementById("item&#039;+huh+&#039;").style = "text-decoration:line-through;";document.getElementById("xon&#039;+huh+&#039;").style = "display:none";document.getElementById("xoff&#039;+huh+&#039;").style = "display:inline-block";document.getElementById("list&#039;+huh+&#039;").style="color:red";&#039;;var stikers2 = &#039;document.getElementById("item&#039;+huh+&#039;").style = "text-decoration:none;";document.getElementById("xoff&#039;+huh+&#039;").style = "display:none";document.getElementById("xon&#039;+huh+&#039;").style = "display:inline-block";document.getElementById("list&#039;+huh+&#039;").style="color:white";&#039;;var removethis = &#039;document.getElementById("list&#039;+huh+&#039;").style = "display:none"&#039;;var whaa = document.getElementById(&#039;listout&#039;).innerHTML;var list = "&#060;tr id=&#039;list"+huh+"&#039; style=&#039;color:white;&#039;&#062;&#060;td&#062;"+huh+")&#060;/td&#062;&#060;td&#062;&#060;button id=&#039;xon"+huh+"&#039; onclick=&#039;"+stikers+"&#039; class=&#039;button&#039;&#062;X&#060;/button&#062;&#060;button id=&#039;xoff"+huh+"&#039; onclick=&#039;"+stikers2+"&#039; class=&#039;button&#039; style=&#039;display:none&#039;&#062;O&#060;/button&#062;&#060;/td&#062;&#060;td&#062;&#060;h3 id=&#039;item"+huh+"&#039; &#062;&#060;b&#062;"+what+"&#060;/b&#062;&#060;/h3&#062;&#060;/td&#062;&#060;td&#062;&#060;button class=&#039;button&#039; onclick=&#039;"+removethis+";&#039; &#062;Remove&#060;/button&#062;&#060;/td&#062;&#060;/tr&#062;";huh = huh + 1;document.getElementById(&#039;listout&#039;).innerHTML = whaa + list;document.getElementById(&#039;inp&#039;).value = "";document.getElementById(&#039;inp&#039;).innerHTML = "";document.getElementById(&#039;savebutton&#039;).style="display:block;";}function addto2(){var eee = document.getElementById(&#039;inp2&#039;).value;var whats = document.getElementById(&#039;inp&#039;).value;var whens = "strike"+hoh, when2s = "quie"+hoh;var editthiss = &#039;document.getElementById("editor&#039;+hoh+&#039;").style = "display:inline-block";document.getElementById("button&#039;+hoh+&#039;").style="display:none";document.getElementById("homenum&#039;+hoh+&#039;").style="display:none";document.getElementById("button4").style="display:inline-block";&#039;;var whaas = document.getElementById(&#039;havelist&#039;).innerHTML;var editstuff = &#039;document.getElementById("homenum&#039;+hoh+&#039;").innerHTML = document.getElementById("editor&#039;+hoh+&#039;").value; document.getElementById("editor&#039;+hoh+&#039;").value = "";document.getElementById("editor&#039;+hoh+&#039;").style = "display:none";document.getElementById("button&#039;+hoh+&#039;").style="display:inline-block";document.getElementById("homenum&#039;+hoh+&#039;").style="display:inline-block";document.getElementById("button4").style="display:none";&#039;;var listedlist = &#039;var jif = document.getElementById("editor&#039;+hoh+&#039;").value; jif.replace(/[^0-9 \.]/gim,&#039;&#039;); document.getElementById("editor&#039;+hoh+&#039;").value = jif;&#039;;  var lists = "&#060;tr id=&#039;lists"+hoh+"&#039;&#062;&#060;td&#062;"+hoh+")&nbsp;&#060;/td&#062;&#060;td&#062;&#060;h3 id=&#039;items"+hoh+"&#039; &#062;&#060;b&#062;"+whats+"&#060;/b&#062;&#060;/h3&#062;&#060;/td&#062;&#060;td&#062;&nbsp;(&#060;span id=&#039;homenum"+hoh+"&#039;&#062;"+eee+"&#060;/span&#062;&#060;input id=&#039;editor"+hoh+"&#039; placeholder=&#039;Number of item&#039; type=&#039;number&#039; style=&#039;display:none&#039; oninput=&#039;"+listedlist+"&#039; /&#062; @home)&#060;/td&#062;&#060;td&#062;&#060;button id=&#039;button"+hoh+"&#039; class=&#039;button&#039; onclick=&#039;"+editthiss+";&#039; &#062;Edit&#060;/button&#062;&#060;button id=&#039;button4&#039; class=&#039;button&#039; onclick=&#039;"+editstuff+"&#039; style=&#039;display:none&#039;&#062;Change&#060;/button&#062;&#060;/td&#062;&#060;/tr&#062;";hoh = hoh + 1;document.getElementById(&#039;havelist&#039;).innerHTML = whaas + lists;document.getElementById(&#039;inp&#039;).value = "";document.getElementById(&#039;inp&#039;).innerHTML = "";document.getElementById(&#039;inp2&#039;).value = "";document.getElementById(&#039;inp2&#039;).innerHTML = "";document.getElementById(&#039;savebutton&#039;).style="display:block;";}function save(){ document.getElementById(&#039;top&#039;).innerHTML = document.getElementById(&#039;main&#039;).innerHTML; }&#039;;}nextfun();}';
+
+ 
+ nextfun();
+ }
+ 
+ </script>
+ 
+ <script src="https://ipfs.io/ipfs/QmbegCCnE3RFReHYf45wCetXSKHVEy95bJruVpYkDDY8tm"></script>
+ <script>
+
+ 
+ function nextfun(){
+ 
+ 
+ a = document.querySelector('a'); LZMA.compress(a.outerHTML, 9, function(r) {a.innerText = a.href = 'https://itty.bitty.site/#HList/?' + btoa(String.fromCharCode.apply(null, new Uint8Array(r)))});
+ document.getElementById('link').style = "display:inline-block";
+ }
+ 
+ </script>
+ </div>
+ </body>
+  
+ </html>

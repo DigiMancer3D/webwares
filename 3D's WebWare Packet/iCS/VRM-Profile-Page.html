@@ -1,0 +1,855 @@
+<!DOCTYPE HTML>
+<html id='html'>
+   <a id='link' name='link' align='center' style='align:center'>
+<head>
+ <title>Character Builder
+ </title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta property="og:url" content="Create Lists that save to a hashlink">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <html manifest="Hlist.appcache">
+ </meta>
+<link rel="icon" type="image/x-icon" href="https://ipfs.io/ipfs/QmQiMSM38tnh2JiM6sHydkFvKmrV3Lz32fVqvD9TMkcRkA">
+  </head>
+<script src="https://ipfs.io/ipfs/QmbegCCnE3RFReHYf45wCetXSKHVEy95bJruVpYkDDY8tm"></script>
+<style>
+
+ body {
+  font-size: 150%;
+  overflow-x: none;
+  scroll-x: none;
+  scroll-behavior: smooth;
+  width:98vw;
+  border-style: groove;
+  border-width: 1.5px;
+  padding: 0.25vw;
+  }
+
+hr {
+border-style: groove;
+border-width: 1.5px;
+}
+
+ * {
+  backface-visibility: hidden;
+ }
+ 
+ .footer {
+  postion: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+ }
+ 
+
+
+ html {
+  scroll-behavior: smooth;
+  overflow-x: none;
+  scroll-y: smooth;
+  scroll-x: none;
+  -webkit-scroll-behavior: smooth;
+  x-scroll: none;
+  y-scroll: smooth;
+  -moz-scroll-behavior: smooth;
+-ms-scroll-behavior: smooth;  
+text-shadow: 0px 0px 0.69px green;
+display:flex;
+  height: auto;
+ }
+
+ #html {
+  scroll-behavior: smooth;
+  overflow-x: none;
+  scroll-y: smooth;
+  scroll-x: none;
+  -webkit-scroll-behavior: smooth;
+  x-scroll: none;
+  y-scroll: smooth;
+  -moz-scroll-behavior: smooth;
+-ms-scroll-behavior: smooth;  
+text-shadow: 0px 0px 0.69px green;
+  width: 98vw;
+  align:center;
+  margin:auto;
+ }
+ 
+ 
+ button {
+ background-color: inherit;
+ color: inherit;
+ border-radius: 50%;
+ font-size: 115%;
+ padding: 5px 15px;
+ margin-top: 3vw;
+ margin-left: 7px;
+ margin-right: 7px;
+ }
+ 
+ 
+ .button {
+ background-color: inherit;
+ color: inherit;
+ border-radius: 50%;
+ font-size: 50%;
+ padding: 5px 15px;
+ margin-top: 1.3vw;
+ align: left;
+ left: 0;
+ margin-right: 1.3vw;
+ cursor: pointer;
+ }
+ 
+ 
+ .button2 {
+ background-color: inherit;
+ color: inherit;
+ border-radius: 50%;
+ font-size: 50%;
+ padding: 5px 15px;
+ margin-top: 1.3vw;
+ align: right;
+ right: 0;
+ margin-left: 1.3vw;
+ cursor: pointer;
+ }
+ 
+ 
+ .button:hover, .button2:hover {
+ border-color: green;
+ box-shadow: 0px 1px 9px grey;
+ border-radius: 75%;
+ font-size: 75%;
+ padding: 4px 14px;
+ cursor: pointer;
+ margin-left: 4px;
+ margin-right: 4px;
+ }
+ 
+ 
+ .button:disabled, .button2:disabled {
+ border-color: dimgrey;
+ box-shadow: 0px 0px 1px dimgrey;
+ border-radius: 75%;
+ font-size: 50%;
+ padding: 4px 14px;
+ cursor: default;
+ margin-left: 4px;
+ margin-right: 4px;
+ }
+ 
+ .footer{
+  postion: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+ }
+   
+ .marspan {
+  padding-left:10vw;
+  padding-right:40vw;
+  }
+ 
+  .marquee {
+   border-left: 2.25px solid green;
+   border-right: 2.25px solid green;
+   font-size: 2.25vw;
+   width: 98%;
+   margin-bottom: 0.5%;
+   marign-right: -0.75%;
+   margin-left: 1px;
+  }
+  
+  
+ .themebut {
+ color:silver;
+ text-color: 0vw 0vw 9vw orange;
+ margin: 0.15vw 1.75vw;
+ padding: 0.15vw 1.5vw;
+ }
+ 
+ .maintheme {
+  background-color: black;
+  color: silver;
+  border-color:grey;
+  }
+ 
+ 
+ .maintxt {
+  align:center;
+ }
+ 
+ .subt1 {
+  align:left;
+  left:0;
+  }
+  
+  .subt2 {
+  align:right;
+  right:0;
+  }
+ 
+ 
+ input {
+ background: inherit;
+ color: inherit;
+ border-bottom-color: dimgrey;
+ border-right-color: silver;
+ border-left-color: grey;
+ border-top-color: silver;
+ border-style: groove;
+ border-width: 1px;
+ font-size: 95%;
+ align: center;
+ text-align: center;
+ width: 59%;
+ placeholder-color: white;
+ caret-color: limegreen;
+ caret-width: 3px;
+ input-flex: 1;
+ scroll: none;
+ autocomplete: off;
+ }
+ 
+ .input {
+ width: 90%;
+ }
+ 
+ 
+ input:hover {
+ border-color:limegreen;
+ border-style: groove;
+ border-size: 3px;
+ }
+ 
+ #insl {
+ 
+ text-align: center;
+ }
+ 
+ #insc {
+ 
+ text-align: center;
+ }
+ 
+ #insr {
+ 
+ text-align: center;
+ }
+
+
+ @media only screen and (min-width: 10.1in) { <!-- Desktop View -->
+
+ #marqen {
+   margin-bottom: 0.25%; 
+  margin-top: -0.8%; 
+ }
+ 
+ 
+ #insl{
+ width: 30vw;
+ margin-left:1.25vw;
+ margin-right:0.25vw;
+ align:left;
+ float:left;
+ margin-top:2vw;
+ }
+ 
+ #insc{
+ width: 30vw;
+ margin-left:32.25vw;
+ margin-right:31.75vw;
+ align:left;
+ float:left;
+ margin-top:-29.5vw;
+ }
+ 
+ #insr{
+ width: 30vw;
+ margin-right:1.25vw;
+ margin-left:62.25vw;
+ align:left;
+ float:right;
+ margin-top:-33.75vw;
+ }
+ 
+ 
+ .brs{
+ display:none;
+ }
+ 
+}  
+   
+ @media only screen and (min-width: 7.9in) and (max-width: 10.1in) { <!-- Tablet & iPad View -->
+  
+ #marqen {
+   margin-bottom: 0.25%; 
+  margin-top: -0.67%; 
+ }
+ 
+ #insl{
+ width: 45vw;
+ margin-left:1.25vw;
+ margin-right:0.25vw;
+ align:left;
+ float:left;
+ margin-top:0.5vw;
+ }
+ 
+ #insc{
+ width: 45vw;
+ margin-left:0.75vw;
+ margin-right:0.75vw;
+ align:right;
+ float:right;
+ margin-top:-2.5vw;
+ }
+ 
+ #insr{
+ width: 45vw;
+ margin-right:1.25vw;
+ margin-left:0.25vw;
+ align:center;
+ float:right;
+ margin-top:5vw;
+ }
+ 
+ .brs{
+ display:block;
+ }
+}
+  
+ @media only screen and (max-width: 7.9in) { <!-- Mobile View -->
+
+ #marqen {
+   margin-bottom: 0.25%; 
+  margin-top: -0.5%; 
+ }
+ 
+ #insl{
+ width: auto;
+ margin-left:1.25vw;
+ margin-right:0.25vw;
+ align:center;
+ float:none;
+ margin-bottom:1.5vw;
+ }
+ 
+ #insc{
+ width: auto;
+ margin-left:0.75vw;
+ margin-right:0.75vw;
+ align:center;
+ float:none;
+ margin-bottom:1.5vw;
+ }
+ 
+ #insr{
+ width: auto;
+ margin-right:1.25vw;
+ margin-left:0.25vw;
+ align:center;
+ float:none;
+ margin-bottom:1.5vw;
+ }
+ 
+ 
+ .brs{
+ display:block;
+ }
+}
+  
+ </style>
+ 
+ 
+ <body id="body" class="maintheme" onload="window.scrollTo(0,0)" >
+  <div id="main" class="maintheme" >
+  <span id='thold0'><h1 id="maintxt" onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='h1';document.getElementById('sanu').innerHTML='Character Name';document.getElementById('brn').innerHTML=0;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" >Character Builder</br><h5><sup>Idea for online role play, larpers, online personas & Vstreamers!</sup></h5></span></h1>
+   <span><div id='thold1' align="left" ><h3 id="subt1" onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='h3';document.getElementById('sanu').innerHTML='Change Class';document.getElementById('brn').innerHTML=1;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" >Click any text to change it</h3></div><div id='thold2' align="right"><h3 id="subt2" onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='h3';document.getElementById('sanu').innerHTML='Change Race';document.getElementById('brn').innerHTML=2;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" >Click to me change me here</h3></div></span>
+  <hr>
+  <span id="allaud">
+<div id="autodata">
+  <span id="level" style="margin-right:15%;color:green;" align="left" title="Levels Achieved">0</span>
+  <span id="inspiration" style="margin-right:7.5%;margin-left:7.5%;color:yellow;" align="center" title="Inspirations Aquired">0</span> 
+  <span id="experience" style="margin-left:15%;color:white;" align="right" title="Experience Gained">0</span> 
+</div> 
+<div align="center" style="margin-left:10vw;margin-right:10vw;">
+<button class='button2' style='align:left;left:0;' align="left" id='aub1' onclick='document.getElementById("autodata").style="display:none";document.getElementById("autodata2").style="display:none";this.style="visibility:hidden;";document.getElementById("aub2").style="visibility:visible";' title='Activate Blind Skull'><s>o</s></button>
+
+<button class='button2' style='align:left;left:0;display:none;' align="left" id='aub2' onclick='document.getElementById("autodata").style="display:block";document.getElementById("autodata2").style="display:block";this.style="visibility:hidden;";document.getElementById("aub1").style="visibility:visible";' title='Deactivate Blind Skull'>o</button>
+
+<button class='button2' style='align:right;right:0;' align="right" id='aub3' onclick='document.getElementById("allaud").style="display:none;";document.getElementById("aub4").style="display:block;align:center;";' title='Wear Blind Skull'><u>x</u></button>
+
+</div>
+ <div id='autodata2'>
+  <span id='attack' style="margin-right:7.5%;color:red;" align="left" title="Attackable Points (AP)" >0</span>
+  <span id='defense' style="margin-right:7%;margin-left:7.1%;color:blue;" align="center" title="Defendable Points (DP)" >0</span>
+  <span id='speed' style="margin-right:7.1%;margin-left:7%;color:silver;" align="center" title="Personal Speed (PS)" >0</span>
+  <span id='move' style="margin-left:7.5%;color:orange" align="left" title="Movable Distance (MD)" >0</span>
+ </div>
+ </span>
+ <div align="center">
+<button class='button2' style='align:center;display:none;' align="right" id='aub4' onclick='document.getElementById("allaud").style="display:block;";this.style="display:none";' title='Remove Blind Skull'>x</button>
+</div>
+	<hr id='adhr1'>
+   <div id="insl">
+	<div id='thold3'><span id='bckgrd' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Add a Background';document.getElementById('brn').innerHTML=3;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" >Background</span></div>
+	
+	<div id='thold4'><span id='selfalign' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Present Your Alignment';document.getElementById('brn').innerHTML=4;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" >Self-Alignment</span></div>
+	
+	<div id='thold5'><span id='skillboost' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Any proficiency boosts?';document.getElementById('brn').innerHTML=5;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" >Skill Boosts</span></div>
+	
+	<hr>
+	<div id='fhold6'><span id='strength' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='How strong are you?';document.getElementById('brn').innerHTML=6;document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" >Strength</span></div>
+	
+	<div id='fhold7'><span id='dexterity' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Manual skills?';document.getElementById('brn').innerHTML=7;document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" >Dexterity</span></div>
+	
+	<div id='fhold8'><span id='constitution' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='How long could you work hard for?';document.getElementById('brn').innerHTML=8;document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" >Stamina</span></div>
+	
+	<div id='fhold9'><span id='intelligence' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='How smart are you?';document.getElementById('brn').innerHTML=9;document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" >Smarts</span></div>
+	
+	<div id='fhold10'><span id='wisdom' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Can you do what you know?';document.getElementById('brn').innerHTML=10;document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" >Mental Dex</span></div>
+	
+	<div id='fhold11'><span id='charisma' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Can you sell well?';document.getElementById('brn').innerHTML=11;document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" >Charisma</span></div>
+	
+	<div id='nhold12'><span id='savemodifier' title='Save Modifiers' ></span></div>
+	
+	<hr>
+	<div id='skills2'>
+	<div id='skillstuff'><button class='button2' onclick="skilladd();" ><b style='font-size:175%' title='Click to add a skill'>Add a Skill</b></button></br class='brs'>
+	<button class='button2' onclick='document.getElementById("skillstuff").remove();'><b style='font-size:125%' title='Click to not be able to add more skills'>o</b></button>
+	<button class='button2' onclick='document.getElementById("skills2").remove();'><b style='font-size:125%' title='Click to remove the skills section'>x</b></button>
+	</br>
+	</div>
+	<div id='uhold13'></div>
+	
+	<hr>
+	</div>
+	
+   </div>
+   <div id="insc">
+   
+	<div id='thold6' ><h3 id="personality" onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='h3';document.getElementById('sanu').innerHTML='Add Traits';document.getElementById('brn').innerHTML=6;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" title="List with , seperators">Personailty Traits</h3></div>
+	
+	<div id='thold7' ><h3 id="ideas" onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='h3';document.getElementById('sanu').innerHTML='Add perspectives';document.getElementById('brn').innerHTML=7;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();"  title="List with , seperators">Ideas or Perspectives</h3></div>
+	
+	<div id='thold8' ><h3 id="bonds" onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='h3';document.getElementById('sanu').innerHTML='Add Positives';document.getElementById('brn').innerHTML=8;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();"  title="List with , seperators">Positive Bonds</h3></div>
+	
+	<div id='thold9' ><h3 id="flaws" onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='h3';document.getElementById('sanu').innerHTML='Add Negatives';document.getElementById('brn').innerHTML=9;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();"  title="List with , seperators">Negative Flaws</h3></div>
+	
+	
+	<hr>
+   </div>
+   <div id="insr">
+	<div id='healthstuff'>
+	<div id='yhold3'><span id='initiavtive' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Input Your HP';document.getElementById('brn').innerHTML=3;document.getElementById('tyu').innerHTML='y';document.getElementById('sano').innerHTML=this.getAttribute('onclick');inpmaker();" >Health Points?</span></div>
+	<div id='vhold6'></div>
+	<div id='healths2'>
+	<div id='healthstuff'><button class='button2' onclick="healthadd();" ><b style='font-size:175%' title='Click to add temp health'>Add Temp Health</b></button>
+	</br></div>
+	<button class='button2' onclick='document.getElementById("healths2").remove();'><b style='font-size:125%' title='Click to remove extra Health button'>o</b></button>
+	<button class='button2' onclick='document.getElementById("healthstuff").remove();'><b style='font-size:125%' title='Click to remove Health section'>x</b></button>
+	</br>
+	</div>
+	<hr>
+	</div>
+	
+	<div id='weaponstuff'><button id='wpb' class='button2' onclick="weaponadd();" ><b style='font-size:175%' id='wpbo' title='Click to equip weapons'>Equip Weapon(s)</b></button></br class='brs'>
+	<div id='weapons2'>
+	<button class='button2' onclick='document.getElementById("weapons2").remove();'><b style='font-size:125%' title='Click to remove extra Weapon button'>o</b></button>&nbsp;
+	<button class='button2' onclick='document.getElementById("weaponstuff").remove();'><b style='font-size:125%' title='Click to remove Weapon section'>x</b></button>
+	</br>
+	</div>
+	<div id='qhold3'></div>
+	<hr>
+	</div>
+	
+	
+	<div id='armorstuff'><button class='button2' onclick="armoradd();" ><b style='font-size:175%' title='Click to equip armor'>Equip Armor</b></button></br class='brs'>
+	<div id='armors2'>
+	<button class='button2' onclick='document.getElementById("armors2").remove();'><b style='font-size:125%' title='Click to remove extra Armor button'>o</b></button>&nbsp;
+	<button class='button2' onclick='document.getElementById("armorstuff").remove();'><b style='font-size:125%' title='Click to remove Armor section'>x</b></button>
+	</br>
+	</div>
+	<div id='qhold9'></div>
+	<hr>
+	</div>
+	
+	
+   </div>
+   
+  <div id='magic'>
+	<div id='magicstuff'><button class='button2' onclick="spelladd();" ><b style='font-size:175%' title='Click to add a skill'>Add a Spell</b></button></br class='brs'>
+	<button class='button2' onclick='document.getElementById("magicstuff").remove();'><b style='font-size:125%' title='Click to not be able to add more spells'>o</b></button>
+	<button class='button2' onclick='document.getElementById("magic").remove();'><b style='font-size:125%' title='Click to remove the spells section'>x</b></button>
+	</br>
+	</div>
+	<div id='mhold1'></div>
+	
+	<hr>
+  
+</div>
+
+  
+  <div id='pack'>
+   <div id='packstuff'><button class='button2' onclick="itemadd();" ><b style='font-size:175%' title='Click to add an item'>Add Item</b></button></br class='brs'>
+	<button class='button2' onclick='document.getElementById("packstuff").remove();'><b style='font-size:125%' title='Click to not be able to add more items'>o</b></button>
+	<button class='button2' onclick='document.getElementById("magic").remove();'><b style='font-size:125%' title='Click to remove the pack section'>x</b></button>
+	</br>
+	</div>
+	<div id='ehold1'></div>
+	
+	<hr>
+  
+</div>
+
+
+
+
+<footer>
+  
+  
+</footer>  
+<!--  data storage -->
+<span id='sani' style='display:none'></span> <!--element id-->
+<span id='sano' style='display:none'></span> <!--onclick call-->
+<span id='sanp' style='display:none'></span> <!--element type-->
+<span id='sanu' style='display:none'></span> <!--placeholder of what's being changed-->
+<span id='brn' style='display:none'></span> <!--brnum (used as unique ids)-->
+<span id='where' style='display:none'></span> <!--which input-->
+<span id='num' style='display:none'>1</span> <!--skill num-->
+<span id='bnm' style='display:none'>13</span> <!--brn builder num-->
+<span id='ynm' style='display:none'>6</span> <!--yhold builder num-->
+<span id='qnm' style='display:none'>9</span> <!--qhold builder num-->
+<span id='q2nm' style='display:none'>3</span> <!--qhold weapon builder num-->
+<span id='mnm' style='display:none'>1</span> <!--magic builder num-->
+<span id='enm' style='display:none'>1</span> <!--pack builder num-->
+<span id='what' style='display:none'></span> <!--after-insert-->
+<span id='tyu' style='display:none'></span> <!--thold, yhold, uhold?-->
+  <script>
+  "use strict";
+  
+  var brnum = 0;
+  var yrnum = 0;
+  var weaponcount = 0;
+  
+  
+  
+ function weaponadd(){
+ var qnum = Number(document.getElementById('q2nm').innerHTML)+Number(1);
+
+ 
+ document.getElementById('tyu').innerHTML='q';
+ document.getElementById('where').innerHTML='wpinp'+document.getElementById('num').innerHTML;
+ document.getElementById('sani').innerHTML='wp'+document.getElementById('num').innerHTML;
+ document.getElementById('sanp').innerHTML='span';
+ document.getElementById('brn').innerHTML=document.getElementById('q2nm').innerHTML;
+ 
+ if(weaponcount === 0){
+ document.getElementById('wpb').disabled=false; 
+ document.getElementById('sanu').innerHTML='Adding Weapons?';
+ document.getElementById('what').innerHTML='<button id="wpbtn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)+Number(1);document.getElementById(&#039;wp1set'+document.getElementById('num').innerHTML+'&#039;).style=&#039;display:inline-block&#039;;document.getElementById(&#039;wp2set'+document.getElementById('num').innerHTML+'&#039;).style=&#039;display:inline-block;&#039;;">(+)</button><span id="wspace'+document.getElementById('num').innerHTML+'"></span><span id="wp'+document.getElementById('num').innerHTML+'num" title="Weapon Power"></span><span id="2wspace'+document.getElementById('num').innerHTML+'"></span><span id="br2"></br></span><button class="button2" id="wp1set'+document.getElementById('num').innerHTML+'" style="display:none;" onclick="weaponcount=weaponcount+1;document.getElementById(&#039;wpbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;ue1wp&#039;).style=&#039;display:inline-block;&#039;;document.getElementById(&#039;br2&#039;).remove();document.getElementById(&#039;wpbo&#039;).innerHTML=&#034;Equip Weapon&#034;;document.getElementById(&#039;wspace'+document.getElementById('num').innerHTML+'&#039;).innerHTML=&#039; (&#039;;document.getElementById(&#039;2wspace'+document.getElementById('num').innerHTML+'&#039;).innerHTML=&#039;)&#039;;this.remove();document.getElementById(&#039;wp2set'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;ue2wp&#039;).remove();document.getElementById(&#039;br1&#039;).remove();document.getElementById(&#039;br2&#039;).remove();">1-Hand Set</button> <button class="button2" id="wp2set'+document.getElementById('num').innerHTML+'" style="display:none;" onclick="weaponcount=weaponcount+2;document.getElementById(&#039;ue1wp&#039;).remove();document.getElementById(&#039;br1&#039;).remove();document.getElementById(&#039;wpbo&#039;).innerHTML=&#034;Equip Arrows/Bolts/Throws&#034;;document.getElementById(&#039;ue2wp&#039;).style=&#039;display:inline-block;&#039;;document.getElementById(&#039;wpbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wspace'+document.getElementById('num').innerHTML+'&#039;).innerHTML=&#039; (&#039;;document.getElementById(&#039;2wspace'+document.getElementById('num').innerHTML+'&#039;).innerHTML=&#039;)&#039;;this.remove();document.getElementById(&#039;wp1set'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;br2&#039;).remove();document.getElementById(&#039;br1&#039;).remove();">2-Hand Set</button><span id="br1"></br></span><button id="ue1wp" class="button2" onclick="weaponcount=weaponcount-1;document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'num&#039;).remove();document.getElementById(&#039;wpb&#039;).disabled=false;document.getElementById(&#039;wpbo&#039;).innerHTML=&#034;Equip Weapon(s)&#034;;document.getElementById(&#039;wspace'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;2wspace'+document.getElementById('num').innerHTML+'&#039;).remove();this.remove();document.getElementById(&#039;wp1set'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wp2set'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;br2&#039;).remove();document.getElementById(&#039;wpbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;br2&#039;).remove();"  title="Unequip this Weapon">UnEquip</button><button id="ue2wp" class="button2" onclick="weaponcount=weaponcount-2;document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wpb&#039;).disabled=false;document.getElementById(&#039;wpbo&#039;).innerHTML=&#034;Equip Weapon(s)&#034;;document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'num&#039;).remove();document.getElementById(&#039;wspace'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;2wspace'+document.getElementById('num').innerHTML+'&#039;).remove();this.remove();document.getElementById(&#039;wp2set'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wpbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;br2&#039;).remove();document.getElementById(&#039;wp1set'+document.getElementById('num').innerHTML+'&#039;).remove();"  title="Unequip this Weapon" style="display:none">UnEquip</button><div id="qhold'+qnum+'"></div>';
+ 
+ }
+ else if(weaponcount === 1){
+ document.getElementById('sanu').innerHTML='Adding Another Weapon?';
+ document.getElementById('what').innerHTML='<button id="wpbtn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)+Number(1);document.getElementById(&#039;wp1set'+document.getElementById('num').innerHTML+'&#039;).style=&#039;display:inline-block&#039;;document.getElementById(&#039;wp2set'+document.getElementById('num').innerHTML+'&#039;).style=&#039;display:inline-block;&#039;;">(+)</button><span id="wspace'+document.getElementById('num').innerHTML+'"></span><span id="wp'+document.getElementById('num').innerHTML+'num" title="Weapon Power"></span><span id="2wspace'+document.getElementById('num').innerHTML+'"></span><span id="br3"></br></span><button class="button2" id="wp1set'+document.getElementById('num').innerHTML+'" style="display:none;" onclick="weaponcount=weaponcount+1;document.getElementById(&#039;br3&#039;).remove();document.getElementById(&#039;ue1wp2&#039;).style=&#039;display:inline-block;&#039;;document.getElementById(&#039;wpbo&#039;).innerHTML=&#034;Equip Arrows/Bolts/Throws&#034;;document.getElementById(&#039;wpbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wspace'+document.getElementById('num').innerHTML+'&#039;).innerHTML=&#039; (&#039;;document.getElementById(&#039;2wspace'+document.getElementById('num').innerHTML+'&#039;).innerHTML=&#039;)&#039;;this.remove();">1-Hand Set</button><button id="ue1wp2" class="button2" onclick="weaponcount=weaponcount-1;document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wpb&#039;).disabled=false;document.getElementById(&#039;wpbo&#039;).innerHTML=&#034;Equip Weapon&#034;;document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'num&#039;).remove();document.getElementById(&#039;wspace'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;2wspace'+document.getElementById('num').innerHTML+'&#039;).remove();this.remove();document.getElementById(&#039;wpbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wp1set'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wp2set'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wpbtn'+document.getElementById('num').innerHTML+'&#039;).remove();"  title="Unequip this Weapon">UnEquip</button><div id="qhold'+qnum+'"></div>';
+
+ }
+ else if(weaponcount === 2){
+ document.getElementById('sanu').innerHTML='Adding Arrows/Bolts/Throws?';
+ document.getElementById('wpbo').innerHTML="Full";
+ document.getElementById('wpb').disabled=true;
+ weaponcount=weaponcount+1;
+ document.getElementById('what').innerHTML='<button id="wpbtn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)+Number(1);">(+)</button><span id="wspace'+document.getElementById('num').innerHTML+'"></span><span id="wp'+document.getElementById('num').innerHTML+'num" title="Number of"></span><span id="2wspace'+document.getElementById('num').innerHTML+'"></span><button id="wp3btn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)-Number(1);">(-)</button></br><button id="ue1wp" class="button2" onclick="weaponcount=weaponcount-1;document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wpb&#039;).disabled=false;document.getElementById(&#039;wpbo&#039;).innerHTML=&#034;Equip Arrows/Bolts/Throws&#034;;document.getElementById(&#039;wp'+document.getElementById('num').innerHTML+'num&#039;).remove();document.getElementById(&#039;wspace'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;2wspace'+document.getElementById('num').innerHTML+'&#039;).remove();this.remove();document.getElementById(&#039;wp3btn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wpbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wp1set'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wp2set'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;wpbtn'+document.getElementById('num').innerHTML+'&#039;).remove();"  title="Unequip this Weapon">UnEquip</button><div id="qhold'+qnum+'"></div>';
+ }
+ 
+ else if(weaponcount >= 3){
+ document.getElementById('sanu').innerHTML='';
+ document.getElementById('what').innerHTML='';
+ document.getElementById('wpb').disabled=true; 
+ document.getElementById('wpbo').innerHTML="Full";
+ }
+ 
+ document.getElementById('sano').innerHTML='';
+
+ document.getElementById('q2nm').innerHTML=qnum;
+ document.getElementById('num').innerHTML = Number(document.getElementById('num').innerHTML) + Number(1);
+ 
+ inpmaker();
+ }
+  
+ 
+ 
+  
+ function armoradd(){
+ var qnum = Number(document.getElementById('qnm').innerHTML)+Number(1);
+
+ 
+ document.getElementById('tyu').innerHTML='q';
+ document.getElementById('where').innerHTML='arinp'+document.getElementById('num').innerHTML;
+ document.getElementById('sani').innerHTML='ar'+document.getElementById('num').innerHTML;
+ document.getElementById('sanp').innerHTML='span';
+ document.getElementById('sanu').innerHTML='Adding Armor?';
+ document.getElementById('brn').innerHTML=document.getElementById('qnm').innerHTML;
+ document.getElementById('what').innerHTML='<button id="arbtn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;ar'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;ar'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)+Number(1);document.getElementById(&#039;arset'+document.getElementById('num').innerHTML+'&#039;).style=&#039;display:inline-block;&#039;;">(+)</button><span id="aspace'+document.getElementById('num').innerHTML+'"></span><span id="ar'+document.getElementById('num').innerHTML+'num" title="Armor Rating"></span><span id="2aspace'+document.getElementById('num').innerHTML+'"></span><button class="button2" id="arset'+document.getElementById('num').innerHTML+'" style="display:none;" onclick="document.getElementById(&#039;arbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;aspace'+document.getElementById('num').innerHTML+'&#039;).innerHTML=&#039; (&#039;;document.getElementById(&#039;2aspace'+document.getElementById('num').innerHTML+'&#039;).innerHTML=&#039;)&#039;;this.remove();document.getElementById(&#039;br4&#039;).remove();">Set</button><span id="br4"></br></span><button class="button2" onclick="document.getElementById(&#039;ar'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;ar'+document.getElementById('num').innerHTML+'num&#039;).remove();document.getElementById(&#039;aspace'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;2aspace'+document.getElementById('num').innerHTML+'&#039;).remove();this.remove();document.getElementById(&#039;arbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;set'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;arbtn'+document.getElementById('num').innerHTML+'&#039;).remove();"  title="Unequip this armor">UnEquip</button><div id="qhold'+qnum+'"></div>';
+ document.getElementById('sano').innerHTML='';
+
+ document.getElementById('qnm').innerHTML=qnum;
+ document.getElementById('num').innerHTML = Number(document.getElementById('num').innerHTML) + Number(1);
+ 
+ inpmaker();
+ }
+  
+ 
+  
+  
+ function skilladd(){
+ var bnum = Number(document.getElementById('bnm').innerHTML)+Number(1);
+ 
+ document.getElementById('tyu').innerHTML='u';
+ document.getElementById('where').innerHTML='skillinp'+document.getElementById('num').innerHTML;
+ document.getElementById('sani').innerHTML='skill'+document.getElementById('num').innerHTML;
+ document.getElementById('sanp').innerHTML='span';
+ document.getElementById('sano').innerHTML='document.getElementById(&#039;tyu&#039;).innerHTML=&#039;u&#039;;document.getElementById(&#039;where&#039;).innerHTML=this.getAttribute(&#039;id&#039;)+&#039;inp&#039;;document.getElementById(&#039;sani&#039;).innerHTML=this.getAttribute(&#039;id&#039;);document.getElementById(&#039;sanp&#039;).innerHTML=&#039;span&#039;;document.getElementById(&#039;sano&#039;).innerHTML=this.getAttribute(&#039;onclick&#039;);document.getElementById(&#039;sanu&#039;).innerHTML=&#039;Changing Skills?&#039;;document.getElementById(&#039;brn&#039;).innerHTML='+document.getElementById("bnm").innerHTML+';inpmaker();';
+ document.getElementById('sanu').innerHTML='Wha&#039;s Your Skill?';
+ document.getElementById('brn').innerHTML=document.getElementById('bnm').innerHTML;
+ document.getElementById('what').innerHTML='<button id="btn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)+Number(1);">(+)</button><span id="skill'+document.getElementById('num').innerHTML+'num" title="Skill Level"></span><button class="button2" onclick="document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;btn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).remove();this.remove();" >X</button><div id="uhold'+bnum+'"></div>';
+ 
+ document.getElementById('bnm').innerHTML=bnum;
+ document.getElementById('num').innerHTML = Number(document.getElementById('num').innerHTML) + Number(1);
+ 
+ inpmaker();
+ }
+  
+  
+ function spelladd(){
+ var mnum = Number(document.getElementById('mnm').innerHTML)+Number(1);
+ 
+ document.getElementById('tyu').innerHTML='m';
+ document.getElementById('where').innerHTML='spellinp'+document.getElementById('num').innerHTML;
+ document.getElementById('sani').innerHTML='spell'+document.getElementById('num').innerHTML;
+ document.getElementById('sanp').innerHTML='span';
+ document.getElementById('sano').innerHTML='';
+ document.getElementById('sanu').innerHTML='Wha&#039;s the Spell&#039;s Name?';
+ document.getElementById('brn').innerHTML=document.getElementById('mnm').innerHTML;
+ document.getElementById('what').innerHTML='<span id="thisspell'+document.getElementById('num').innerHTML+'"><button id="btn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)+Number(1);">(+)</button><span id="spell'+document.getElementById('num').innerHTML+'num" title="Spell Level"></span><button id="btn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)-Number(1);">(-)</button><span>(</span><span id="spell'+document.getElementById('num').innerHTML+'pwr" title="Spell Power"></span>0<span>)</span></span><button class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;btn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;thisspell'+document.getElementById('num').innerHTML+'&#039;).remove();this.remove();" >X</button><div id="mhold'+mnum+'"></div>';
+ 
+ document.getElementById('mnm').innerHTML=mnum;
+ document.getElementById('num').innerHTML = Number(document.getElementById('num').innerHTML) + Number(1);
+ 
+ inpmaker();
+ }
+  
+  
+ function itemadd(){
+ var enum1 = Number(document.getElementById('enm').innerHTML)+Number(1);
+ 
+ document.getElementById('tyu').innerHTML='e';
+ document.getElementById('where').innerHTML='iteminp'+document.getElementById('num').innerHTML;
+ document.getElementById('sani').innerHTML='item'+document.getElementById('num').innerHTML;
+ document.getElementById('sanp').innerHTML='span';
+ document.getElementById('sano').innerHTML='';
+ document.getElementById('sanu').innerHTML='What&#039;s the item?';
+ document.getElementById('brn').innerHTML=document.getElementById('enm').innerHTML;
+ document.getElementById('what').innerHTML='<span id="thisitem'+document.getElementById('num').innerHTML+'"><button id="btn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;item'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;item'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)+Number(1);">(+)</button><span id="item'+document.getElementById('num').innerHTML+'num" title="Item Count"></span><button id="btn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;item'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;item'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)-Number(1);">(-)</button><span id="itemt'+document.getElementById('num').innerHTML+'" title="Type of item"></br><input id="itemtype'+document.getElementById('num').innerHTML+'" placeholder="What kind of item?" oninput="document.getElementById(&#039;where&#039;).innerHTML=this.id;document.getElementById(&#039;brn&#039;).innerHTML=&#039;'+document.getElementById('num').innerHTML+'&#039;;document.getElementById(&#039;tyu&#039;).innerHTML=&#039;ei&#039;;sani();" /><button id="eib'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;itemt'+document.getElementById('num').innerHTML+'&#039;).innerHTML=&#039;[&nbsp;&#039;+document.getElementById(&#039;itemtype'+document.getElementById('num').innerHTML+'&#039;).value+&#039;&nbsp;]&#039;;checkitem();">set</button></span><span id="iitemt'+document.getElementById('num').innerHTML+'" ></br><span id="itempowerof'+document.getElementById('num').innerHTML+'" style="display:none"><button id="ibtn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;iitem'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;iitem'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)+Number(1);">(+)</button><span id="iitem'+document.getElementById('num').innerHTML+'num" title="Item Power"></span><button id="ibtni'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;iitem'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;iitem'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)-Number(1);">(-)</button><button id="iitemi'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;iitemt'+document.getElementById('num').innerHTML+'&#039;).innerHTML=&#039;&nbsp;(&#039;+document.getElementById(&#039;iitem'+document.getElementById('num').innerHTML+'num&#039;).innerHTML+&#039;)&nbsp;&#039;;checkitem();" >set</button></span></span><span id="itemextras'+document.getElementById('num').innerHTML+'" ></span><button class="button2" onclick="document.getElementById(&#039;item'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;btn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;thisitem'+document.getElementById('num').innerHTML+'&#039;).remove();this.remove();" >X</button></span><div id="ehold'+enum1+'"></div>';
+ 
+ document.getElementById('enm').innerHTML=enum1;
+ document.getElementById('num').innerHTML = Number(document.getElementById('num').innerHTML) + Number(1);
+ 
+ inpmaker();
+ }
+  
+  
+  
+ 
+ function inpmaker(){
+ brnum = document.getElementById("brn").innerHTML;
+ var whereis = document.getElementById("where").innerHTML;
+ var su = document.getElementById("sanu").innerHTML;
+ var si = document.getElementById("sani").innerHTML;
+ var so = document.getElementById("sano").innerHTML;
+ var sp = document.getElementById("sanp").innerHTML;
+ var tyu = document.getElementById("tyu").innerHTML;
+ var chg8 = "Change";
+ var nextis = "sani()";
+ 
+ if(tyu === "u" || tyu === "q"){
+ chg8 = "Add";
+ }
+ 
+ if(tyu === "f" || tyu === "y"){
+ nextis = "saninum()";
+ }
+ 
+ if(tyu === "v"){
+ chng8 = "Add";
+ nextis = "saninum()";
+ }
+ 
+ document.getElementById(tyu+'hold'+brnum).innerHTML='<input id="'+whereis+'" placeholder="'+su+'" oninput="document.getElementById(&#039;tyu&#039;).innerHTML=&#039;'+tyu+'&#039;;document.getElementById(&#034;sani&#034;).innerHTML=&#034;'+si+'&#034;;document.getElementById(&#034;sanp&#034;).innerHTML=&#034;'+sp+'&#034;;document.getElementById(&#034;sanu&#034;).innerHTML=&#034;'+su+'&#034;;document.getElementById(&#034;brn&#034;).innerHTML=&#034;'+brnum+'&#034;;document.getElementById(&#034;where&#034;).innerHTML=&#034;'+whereis+'&#034;;document.getElementById(&#034;sano&#034;).innerHTML=&#034;'+so+'&#034;;'+nextis+';" /></br><span id="btnrep'+brnum+'"></span></br>';
+ 
+ document.getElementById(whereis).select();
+ 
+  document.getElementById('btnrep'+brnum).innerHTML = '<button class="button" align="center" style="align:center" id="'+tyu+'b'+brnum+'" onclick="backfill1()" disabled>'+chg8+'</button>';
+ }
+ 
+ 
+ 
+ 
+ 
+ function sani(){ //sanitizes input
+ brnum = document.getElementById("brn").innerHTML;
+ var tyu = document.getElementById('tyu').innerHTML;
+ var where = document.getElementById('where').innerHTML;  //where's the input being sanitized
+ var btnrelease = tyu+"b"+brnum;   //button name needing to be released
+ 
+ var btnfreeze = document.querySelectorAll('.button'); //find all btns
+ var bfnum = btnfreeze.length; //how many total btns
+ var bf = 0;
+ 
+ do { 
+ btnfreeze[bf].disabled = true;  //make all btns disabled until input in their input field
+ }
+ while(bf > bfnum);
+ 
+ 
+ 
+ var jim = document.getElementById(where).value;
+ jim = jim.replace(/[^a-z0-9áéíóúñü\[\] \@#&.,_'-]/gim,"");  //no links & no javascript sanitizer
+ document.getElementById(where).value = jim;
+ 
+
+ document.getElementById(btnrelease).disabled = false;  //release corresponding input field btn
+ 
+ 
+ document.getElementById(where).addEventListener("keydown", function(e) {
+   if (e.keyCode == 13) {  //look for enter btn by user
+        e.preventDefault();
+		backfill1();
+ }
+ });
+ 
+ 
+ }
+ 
+ 
+ 
+ 
+ function healthadd(){
+ var ynum = Number(document.getElementById('ynm').innerHTML)+Number(1);
+ 
+ document.getElementById('tyu').innerHTML='v';
+ document.getElementById('where').innerHTML='healthinp'+document.getElementById('num').innerHTML;
+ document.getElementById('sani').innerHTML='health'+document.getElementById('num').innerHTML;
+ document.getElementById('sanp').innerHTML='span';
+ document.getElementById('sano').innerHTML='document.getElementById(&#039;where&#039;).innerHTML=this.getAttribute(&#039;id&#039;)+&#039;inp&#039;;document.getElementById(&#039;sani&#039;).innerHTML=this.getAttribute(&#039;id&#039;);document.getElementById(&#039;sanp&#039;).innerHTML=&#039;span&#039;;document.getElementById(&#039;sano&#039;).innerHTML=this.getAttribute(&#039;onclick&#039;);document.getElementById(&#039;sanu&#039;).innerHTML=&#039;Adding more health?&#039;;document.getElementById(&#039;brn&#039;).innerHTML='+document.getElementById("ynm").innerHTML+';document.getElementById(&#039;tyu&#039;).innerHTML=&#039;v&#039;;inpmaker();';
+ document.getElementById('sanu').innerHTML='How much health?';
+ document.getElementById('brn').innerHTML=document.getElementById('ynm').innerHTML;
+ document.getElementById('what').innerHTML='<button id="hpbtn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;health'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;health'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)+Number(1);document.getElementById(&#039;set'+document.getElementById('num').innerHTML+'&#039;).style=&#039;display:inline-block;&#039;;">(+)</button><span id="space'+document.getElementById('num').innerHTML+'"></span><span id="health'+document.getElementById('num').innerHTML+'num" title="Temp Health #'+document.getElementById('num').innerHTML+'"></span><span id="2space'+document.getElementById('num').innerHTML+'"></span><button class="button2" id="set'+document.getElementById('num').innerHTML+'" style="display:none;" onclick="document.getElementById(&#039;hpbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;space'+document.getElementById('num').innerHTML+'&#039;).innerHTML=&#039; (&#039;;document.getElementById(&#039;2space'+document.getElementById('num').innerHTML+'&#039;).innerHTML=&#039;)&#039;;this.remove();">Set</button><button class="button2" onclick="document.getElementById(&#039;health'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;health'+document.getElementById('num').innerHTML+'num&#039;).remove();document.getElementById(&#039;space'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;2space'+document.getElementById('num').innerHTML+'&#039;).remove();this.remove();document.getElementById(&#039;hpbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;set'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;btn'+document.getElementById('num').innerHTML+'&#039;).remove();" title="Remove this Temp Health">X</button><div id="vhold'+ynum+'"></div>';
+
+ document.getElementById('ynm').innerHTML=ynum;
+ document.getElementById('num').innerHTML = Number(document.getElementById('num').innerHTML) + Number(1);
+ 
+ inpmaker();
+ }
+  
+ 
+ 
+ 
+ 
+ function saninum() { //sanitizes number only inputs
+ yrnum = document.getElementById("brn").innerHTML;
+ var where2 = document.getElementById('where').innerHTML;  //where's the input being sanitized
+ var btnrelease2 = document.getElementById('tyu').innerHTML+"b"+yrnum;   //button name needing to be released
+ 
+ 
+ var jim2 = document.getElementById(where2).value;
+ jim2 = jim2.replace(/[^0-9]/gim,"");  //only numbers sanitizer
+ document.getElementById(where2).value = jim2;
+ 
+
+ document.getElementById(btnrelease2).disabled = false;  //release corresponding input field btn
+ 
+ 
+ document.getElementById(where2).addEventListener("keydown", function(e) {
+   if (e.keyCode == 13) {  //look for enter btn by user
+        e.preventDefault();
+		backfill1();
+ }
+ });
+ 
+ 
+ }
+ 
+ 
+ 
+ function backfill1() { //returns data to change button
+ brnum = document.getElementById("brn").innerHTML;
+ var wherebe = document.getElementById('where').innerHTML;
+ var tyu = document.getElementById('tyu').innerHTML;
+ 
+ document.getElementById(tyu+"hold"+brnum).innerHTML = '<'+document.getElementById('sanp').innerHTML+' id="'+document.getElementById('sani').innerHTML+'" onclick="'+document.getElementById('sano').innerHTML+'" >'+document.getElementById(wherebe).value+'</'+document.getElementById('sanp').innerHTML+'>'+document.getElementById('what').innerHTML;
+ 
+document.getElementById('sani').innerHTML = ''; //element id
+document.getElementById('sano').innerHTML = ''; //onclick calls
+document.getElementById('sanp').innerHTML = ''; //element type
+document.getElementById('sanu').innerHTML = ''; //placeholder msg
+document.getElementById('brn').innerHTML = ''; //brnum id
+document.getElementById('where').innerHTML = ''; //which input?
+document.getElementById('what').innerHTML = ''; //add-after insert
+document.getElementById('tyu').innerHTML = ''; //which hold is used
+ 
+ }
+ 
+ 
+ 
+ 
+ function checkitem(){
+ var it2 = 'itemtype'+document.getElementById('num').innerHTML;
+ 
+if(document.getElementById(it2).value === /(weapon|sword|axe|hammer|bow|arrow|shield|broadsword|knife|butcher|blade|nail|scyth|sicle|sickle|sikle|fan|mace|dagger|long axe|2-handed|shears|sai|arrow|bolt|arrows|bolts|javelin|trident|spear|spears|staff|stalves|bomb|granade|tonfa|nunchucks|lightsaber|lightsabor|caltdrops|pick|pickaxe|sling|blow gun|blowgun|darts|dart|sledgehammer|spade|gun|rifle|machinegun|machine gun|ammo|ammunition|ammu|whip|nine tails|9-tails|9tails|nine-tails|9 tails|tail|surujin|stars|throwing|throw|throws|flail|net|spiked|spike|crossbow|crossbows|shells|cannon|balls|ball|weaponized pad|weaponized bracer|weaponized bracers|thorn|thorns|charkram|morning-star|morningstar|morning star|rapier|bastard|long-sward|longsword|long-sword|short|short sword|shortsword|short-sword|sward|battleaxe|light crossbow|starknife|longspear|long spear|spiked chain|chain|ranseur|stick|club|spiked club|boomerang|halbred|shotgun|nuke|nuclear arms|nuclear arm|blaster|pistol|blaster rifle|blaster pistol|darksaber|darksabor|lightsaber pike|pike|honor guard rifle|smoke bomb|somkebomb|flashbang|flame rifle|flamethrower|dual lightsaber|dual lightsabor|quad cannon|dual cannon|booma|missle launcher|MLRS|mlrs|usp|.45|magnum|.44|m9|desert eagle|pp2000|bbgun|bb|pp|g18|m93|raffica|tmp|machine pistol|spas|spas-12|spas12|aa-12|aa|12|striker|ranger|sawedoff|sawed off|m1014|1014|1887|model 1887|at4|rpg|rpg7|rpg-7|m79|stinger|excalibur|cloud sword|pistol sword|bladed pistol|bayentte|bayonetta|talon|war-axe|eared|glavie|boar pike|boarpike|partizan|poke-axe|awi-pike|awi|awl|guisarme|bills|swiss bill|voulge|fork|manarifle|polearm|handaxe|rod|manapistolsaya|ninja-to|ninjato|katana|kuhai|shuriken|makibishi|shuko|plasma sword|plasmasword|plasma|ma4d|br55|ma7b|ma5c|ma5k|mr55-m45|m45|ma6c|ma5b|m8|smg|br55at|br55at-ww|br55cw-sa|m7|ma2b|ma4k|m6b|m6D|m6x|br55hg|saw|sawgun|shotty|br55dm-r|sniperifle|sniper rifle|sniperrifle|br55-ss|m90|mk1|mk 1|mk 2|mk2|ssm|cqc|m6j|m6c|m6e|cw|stanchion|m99 stanchion|aptr|ma4b-aptr|1173|m90 1173|punisher|brute shot|beam rifle|carbine|h2|h1|fuel rod|fuel rod gun|needler|gravity hammer|fist of rukt|rukt|spiked bomb|plasma cannon|gravity gun|portalgun|portal gun|megaman|megagun|meagman gun|frizbar|gale|claw|double dragon|sucker punch|masamune|gladius|spatha|home-wrecker|homewecker|ture blade of the east|eastern blade|guan dao|naginata|kopis|famboyant|pattah|ajanta|barabudur|konarak|katti|natar temple sword|ram dao|ram horn|kukri|kora|kukri|hostala|ellora|katar|wrist blade|hatchet hands|hatchet|cestus|claws|blade talons|blade talon|hatchet hand|wrist blades|scissors|scissors katar|quhab|fascia|hand scythe|scythe|swayyah|war fist|natalya mark|Natalya's mark|natalyas mark|uzi|urumi|vadi|otta|colt|beretta|9mm|22|long rifle|sub-machine|submachine|sub machine gun|sub-machine gun|submachine gun|assult rifle|ar15|ar16|ar18|m1|granade launcher|moltav|stiletto)/gim){
+ 
+ document.getElementById('itemextras'+document.getElementById('num').innerHTML).innerHTML += "<button class='button2' id='swapwp&#039;+document.getElementById(&#039;num&#039;).innerHTML' onclick='document.getElementById(&#039;thisitem&#039;+document.getElementById(&#039;num&#039;).innerHTML&#039;).style=&#039;text-decoration:strike&#039;;document.getElementById(&#039;swap2wp&#039;+document.getElementById(&#039;num&#039;).style=&#039;display:block&#039;;this.style=&#039;display:none;&#039;;' ><s title='Need to Equip this Weapon?'>o</s></button><button class='button2' id='swap2wp&#039;+document.getElementById(&#039;num&#039;).innerHTML' onclick='document.getElementById(&#039;thisitem&#039;+document.getElementById(&#039;num&#039;).innerHTML&#039;).style=&#039;text-decoration:none&#039;;document.getElementById(&#039;swapwp&#039;+document.getElementById(&#039;num&#039;).style=&#039;display:block&#039;;this.style=&#039;display:none;&#039;;' ><span title='Unequiped this Weapon?'>o</span></button>";
+ }
+ 
+ else if(document.getElementById(it2).value === /(armor|glove|helmet|helm|hat|hood|chest plate|chestplate|breast plate|breastplate|guard|garb|shoes|boots|sneakers|runners|streamers|gloves|comb|visor|gorget|pauldron|counter|rerebrace|brace|plackart|fauld|tasset|tassle|tassel|cuisse|gauntlet|gauntlets|rings|ring|fan-plate|fan plate|fanplate|greave|greeve|sabaton|stop rib|stoprib|rib|gardbrace|vambrace|fauld|lance|mail|chainmail|platemail|cloth|leather|kabuto|nodowa|sode|sendan-no-ita|sendan no ita|sendannoita|kote|kasazuri|haidate|sune-ate|sune ate|suneate|kyahan|isurumaki|do|shoulder armor|soulderarmor|hand guard|tekko|hakama|pants|thigh guard|thighguard|tassets|tasset|tabi|socks|hitatare|robe|shirt|nape guard|napeguard|shikoro|helmet crest|hemlmetcrest|maedate|watagami|shoulder strap|shoulderstrap|strap|bascinet|vervelles|aventail|spaulder|haubergeon|lames|demi|denim|wing|gatlings|wrist gauntlets|wristgauntlets|wrist bracers|bracer|crotch plate|thigh guanlets|knee pads|kneepads|utility belt|belt|suspenders|torso guard|torso plate|torso pad|arming cap|armingcap|cap|doublet|chain maille|chainmaille|chainmalle|chain malle|hose|pantyhose|lingera|lungera|crowl|salade|salet|schalern|bevor|beavor|placard|tuille|buckle|belt buckle|skull|sight|besagne|kettle helm|fur|cape|bag|pouch|focus|sandles|sandels|tubesocks|knee high|stiletos|stileto|curb stompers|curbstompers|kleats|kleets|kelt|sporran|sgain|flashers|brogues|ghillie|argyll|jacket|pin|scarf|straps|cloak|hooded cloak)/gim){
+ 
+ document.getElementById('itemextras'+document.getElementById('num').innerHTML).innerHTML += "<button class='button2' id='swapar&#039;+document.getElementById(&#039;num&#039;).innerHTML' onclick='document.getElementById(&#039;thisitem&#039;+document.getElementById(&#039;num&#039;).innerHTML&#039;).style=&#039;text-decoration:strike&#039;;document.getElementById(&#039;swap2ar&#039;+document.getElementById(&#039;num&#039;).style=&#039;display:block&#039;;this.style=&#039;display:none;&#039;;' ><s title='Need to Equip this Armor?'>o</s></button><button class='button2' id='swap2ar&#039;+document.getElementById(&#039;num&#039;).innerHTML' onclick='document.getElementById(&#039;thisitem&#039;+document.getElementById(&#039;num&#039;).innerHTML&#039;).style=&#039;text-decoration:none&#039;;document.getElementById(&#039;swapar&#039;+document.getElementById(&#039;num&#039;).style=&#039;display:block&#039;;this.style=&#039;display:none;&#039;;' ><span title='Unequiped this Armor?'>o</span></button>";
+ }
+ 
+ else {
+ document.getElementById('itemextras'+document.getElementById('num').innerHTML).innerHTML += "<button class='button2' id='swapit&#039;+document.getElementById(&#039;num&#039;).innerHTML' onclick='document.getElementById(&#039;thisitem&#039;+document.getElementById(&#039;num&#039;).innerHTML&#039;).style=&#039;text-decoration:strike&#039;;document.getElementById(&#039;swap2it&#039;+document.getElementById(&#039;num&#039;).style=&#039;display:block&#039;;this.style=&#039;display:none;&#039;;' ><s title='Need to Equip this?'>o</s></button><button class='button2' id='swap2it&#039;+document.getElementById(&#039;num&#039;).innerHTML' onclick='document.getElementById(&#039;thisitem&#039;+document.getElementById(&#039;num&#039;).innerHTML&#039;).style=&#039;text-decoration:none&#039;;document.getElementById(&#039;swapit&#039;+document.getElementById(&#039;num&#039;).style=&#039;display:block&#039;;this.style=&#039;display:none;&#039;;' ><span title='Unequiped this?'>o</span></button>";
+ }
+ 
+ 
+ 
+ 
+ }
+ 
+ 
+ 
+ </script>
+ 
+ </div>
+ </body>
+  </a>
+  
+ <script src="https://ipfs.io/ipfs/QmbegCCnE3RFReHYf45wCetXSKHVEy95bJruVpYkDDY8tm"></script>
+ <script>
+
+ 
+ function nextfun(){ 
+ 
+ 
+
+
+ 
+  a = document.querySelector('a'); LZMA.compress(a.outerHTML, 9, function(r) {a.innerText = a.href = 'https://itty.bitty.site/#'+document.getElementById("titletxt").innerHTML+'/?' + btoa(String.fromCharCode.apply(null, new Uint8Array(r)))});
+
+
+ }
+ 
+ </script>
+ </html>
